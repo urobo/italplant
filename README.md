@@ -1,4 +1,5 @@
-# MonsieurPress
+# ITALPLANT
+
 Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developpers
 
 ## How am I ?
