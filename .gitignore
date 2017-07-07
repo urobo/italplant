@@ -54,3 +54,4 @@ temp/
 
 *.codekit
 *.scssc
+package.json
