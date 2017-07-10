@@ -67,7 +67,7 @@ gulp.task('images', function() {
 gulp.task('compress', function() {
     gulp.src('assets/javascript/src/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('javascript/dist/'));
+        .pipe(gulp.dest('assets/javascript/dist/'));
 });
 
 
