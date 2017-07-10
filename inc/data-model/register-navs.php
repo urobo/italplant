@@ -5,8 +5,8 @@
 *************************************/
 
 register_nav_menus(array(
-	'upper-nav' => __( 'Header Service Links', 'monsieurpress' ),
-	'main-nav' => __( 'The Main Menu', 'monsieurpress' ),
-	'footer-links-left' => __( 'Footer Links Left', 'monsieurpress' ),
-	'footer-links-right' => __( 'Footer Links Right', 'monsieurpress' )
+	'upper-nav' => __( 'Header Service Links', 'italplant' ),
+	'main-nav' => __( 'The Main Menu', 'italplant' ),
+	'footer-links-left' => __( 'Footer Links Left', 'italplant' ),
+	'footer-links-right' => __( 'Footer Links Right', 'italplant' )
 ));

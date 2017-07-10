@@ -8,7 +8,7 @@ function register_scripts() {
     if (is_admin()) return;
 
     /* Enqueue theme script & style */
-    wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/assets/javascript/dist/scripts.js', array('jquery'),'1.0.0', true );
+    wp_enqueue_script( 'italplant-js', get_template_directory_uri() . '/assets/javascript/dist/scripts.js', array('jquery'),'1.0.0', true );
 
 
     /* Enqueue comment-reply script if needed */

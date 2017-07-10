@@ -1,5 +1,5 @@
 /*
- * MonsieurPress Script file
+ * italplant Script file
  * Author: David MANSON
  */
 

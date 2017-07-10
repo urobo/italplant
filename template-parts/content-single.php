@@ -10,8 +10,8 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         <aside class="entry-meta">
-            <?php _e('Posted', 'monsieurpress'); ?> <?php the_date(); ?>
-			<?php _e('by', 'monsieurpress'); ?> <?php the_author(); ?>
+            <?php _e('Posted', 'italplant'); ?> <?php the_date(); ?>
+			<?php _e('by', 'italplant'); ?> <?php the_author(); ?>
         </aside>
 	</header>
 

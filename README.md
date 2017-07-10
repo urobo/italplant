@@ -1,9 +1,9 @@
 # ITALPLANT
 
-Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developpers
+Hello, I'm italplant, a super cool, lightweight & simple WordPress starter theme for developpers
 
 ## How am I ?
-Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me ! [Check my website](http://www.monsieurpress.com/ "MonsieurPress") to see how I look without modification.
+Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me ! [Check my website](http://www.italplant.com/ "italplant") to see how I look without modification.
 
 ## Requirements
 - A working WordPress installation
@@ -12,7 +12,7 @@ Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy t
 ## How to use me ?
 Go to your wordpress theme folder with your terminal, and type the following commands :
 
-	$ git clone https://github.com/dadipaq/monsieurpress.git [yourthemename]
+	$ git clone https://github.com/dadipaq/italplant.git [yourthemename]
     $ cd [yourthemename]
 	$ npm install
 	$ gulp
