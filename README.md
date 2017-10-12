@@ -1,26 +1,20 @@
 # ITALPLANT
+Wordpress theme based on https://github.com/davidmanson/monsieurpress/
 
-Hello, I'm italplant, a super cool, lightweight & simple WordPress starter theme for developpers
-
-## How am I ?
-Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me ! [Check my website](http://www.italplant.com/ "italplant") to see how I look without modification.
 
 ## Requirements
 - A working WordPress installation
 - Npm (packaged in node)
 
-## How to use me ?
+## How to use?
 Go to your wordpress theme folder with your terminal, and type the following commands :
 
-	$ git clone https://github.com/dadipaq/italplant.git [yourthemename]
     $ cd [yourthemename]
 	$ npm install
 	$ gulp
 
-You are now ready for happy coding !
-
 ## Gulp tasks
-I have some embeded gulp tasks that can be use for you workflow :
+Some embeded gulp tasks that can be use for you workflow :
 
 - `gulp` : Watch the `scss` directory and compile files to the style.css file
 - `gulp styles` : Just compile the scss (no watching)
