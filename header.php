@@ -39,4 +39,4 @@
 
             </div>
         </header>
-        <div class="site-content">
+        <div class="site-content fix-nav">

@@ -5,8 +5,7 @@
 *************************************/
 
 register_nav_menus(array(
-	'upper-nav' => __( 'Header Service Links', 'italplant' ),
-	'main-nav' => __( 'The Main Menu', 'italplant' ),
-	'footer-links-left' => __( 'Footer Links Left', 'italplant' ),
-	'footer-links-right' => __( 'Footer Links Right', 'italplant' )
+	'main-nav' => __( 'Main Menu', 'italplant' ),
+	'footer-links-1' => __( 'Footer Links 1', 'italplant' ),
+	'footer-links-2' => __( 'Footer Links 2', 'italplant' )
 ));

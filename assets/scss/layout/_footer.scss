@@ -1,13 +1,27 @@
 /*----------------------
    Footer style
 -----------------------*/
+.bg-footer{
+	background-color: $gray-2;
+}
 .footer {
-	text-align: center;
-	font-size: 12px;
-	color: $dark-gray;
+	font-size: 14px;
+	color: $white;
 }
 
-.footer-links > ul{
-	list-style: none;
-	padding: 0;
+.footer-links{
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+		display: inline-block;
+		padding-bottom: 6px;
+		&:hover{
+			text-decoration: line-through;
+		}
+	}
 }

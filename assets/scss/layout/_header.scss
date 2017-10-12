@@ -12,7 +12,18 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 .header {
     background-color: $white;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
+
+/*----------------------
+   Top space (fix nav)
+-----------------------*/
+.fix-nav{
+    padding-top: $header-height;
 }
 
 
@@ -56,14 +67,15 @@ $margin-logo: ($header-height - $logo-height)/2;
         text-align: center;
     }
     li > a {
-        color: $gray;
-        font-weight: bold;
+        color: $dark-gray;
+        font-weight: 600;
         display: block;
         padding: 0.75em;
         white-space: nowrap;
         &:hover {
             text-decoration: none;
-            color: $main-color;
+            border-bottom: 3px solid $main-color;
+            margin-bottom: -3px;
         }
     }
     .no-js &,
@@ -91,12 +103,18 @@ $margin-logo: ($header-height - $logo-height)/2;
         li a {
             padding: 0 1em;
             line-height: $header-height;
+            font-size: 14px;
+            &:hover{
+                margin-bottom: -3px;
+                border-bottom: 3px solid $main-color;
+            }
         }
         li.current-menu-item > a,
         li.current_page_item > a,
         li.current_page_ancestor > a,
         .current-menu-ancestor > a {
-            color: $main-color;
+            margin-bottom: -3px;
+            border-bottom: 3px solid $main-color;
         }
     }
 }
@@ -111,7 +129,18 @@ $margin-logo: ($header-height - $logo-height)/2;
         z-index: 100;
         right: 0;
         padding: 0;
-        background: $light-gray;
+        background: $white;
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+        width: 100%;
+        li {
+            display: block;
+            a {
+                line-height: 60px;
+                &:hover{
+                    margin-bottom: -3px;
+                }
+            }
+        }
     }
 }
 
