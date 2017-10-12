@@ -1159,14 +1159,22 @@ input[type="submit"] {
   margin: 1.5rem auto;
   background-color: #FFED00; }
 
+.yellow-divider-left {
+  width: 140px;
+  height: 4px;
+  display: block;
+  margin: 1.5rem auto 1.5rem 0;
+  background-color: #FFED00; }
+
 .h-hero-content {
-  padding-top: 40vh;
+  padding-top: 50vh;
   text-align: center; }
   .h-hero-content h1 {
     color: #FFFFFF;
     font-size: 2.5em;
     line-height: 1.4;
     margin: 0;
+    font-weight: 600;
     text-shadow: 0 0 50px #1a5371; }
   .h-hero-content h3 {
     color: #FFFFFF;
@@ -1181,3 +1189,32 @@ input[type="submit"] {
 -----------------------*/
 .h-sub-hero {
   padding: 5rem 0; }
+
+/*----------------------
+   Hero style
+-----------------------*/
+.h-features {
+  position: relative;
+  padding: 6em 0;
+  background: #1a5371;
+  background: linear-gradient(to bottom, #1a5371 0%, #276f9d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5371', endColorstr='#276f9d',GradientType=0 ); }
+  .h-features .hf-pattern {
+    opacity: .06;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .h-features .hf-content {
+    color: #FFFFFF; }
+    .h-features .hf-content h2 {
+      color: #FFFFFF; }
+    .h-features .hf-content .hf-list ul {
+      list-style: none;
+      padding: 0; }
+      .h-features .hf-content .hf-list ul li {
+        font-weight: 600;
+        padding-bottom: .5rem; }

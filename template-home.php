@@ -63,7 +63,51 @@
 </div>
 
 
+<?php // Home features 2-col content ?>
+<?php $hf_bg = get_field('hf_background');
+$hf_bg_small = (array) get_size($hf_bg, 1242, 2208, true );
+$hf_bg_medium = (array) get_size($hf_bg, 1600 );
+$hf_bg_large = (array) get_size($hf_bg, 2400);
+?>
 
+<style media="screen">
+            .hf-pattern{
+                    background-image: url('<?php echo $hf_bg_small['url'] ?>');
+            }
+            @media (min-width: 767px) {
+                    .hf-pattern{
+                            background-image: url('<?php echo $hf_bg_medium['url'] ?>');
+                    }
+            }
+            @media (min-width: 1023px) {
+                    .hf-pattern{
+                            background-image: url('<?php echo $hf_bg_large['url'] ?>');
+                    }
+            }
+    </style>
+
+<div class="h-features">
+    <div class="hf-pattern"></div>
+
+
+        <div class="l-container">
+            <div class="l-col-4 l-col-push-1 hf-content">
+                <h2><?php echo the_field('hf_title_left') ?></h2>
+                <div class="yellow-divider-left"></div>
+                <div class="hf-list">
+                    <?php echo the_field('hf_content_left') ?>
+                </div>
+            </div>
+            <div class="l-col-4 l-col-push-1 hf-content">
+                <h2><?php echo the_field('hf_title_right') ?></h2>
+                <div class="yellow-divider-left"></div>
+                <div class="hf-list">
+                    <?php echo the_field('hf_content_right') ?>
+                </div>
+            </div>
+        </div>
+
+</div>
 
 
 
