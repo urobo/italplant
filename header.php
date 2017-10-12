@@ -24,19 +24,8 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo"/>
                     </a>
 
-                    <!-- mobile button menu -->
-                    <button class="btn js-menu-toggle menu-btn">Menu</button>
-
-                    <!-- menu -->
-                    <nav class="site-nav">
-                        <?php wp_nav_menu(array(
-                            'container' => false,
-                            'theme_location' => 'main-nav',
-                        )); ?>
-                    </nav>
-
                 </div>
 
             </div>
         </header>
-        <div class="site-content fix-nav">
+        <div class="site-content">

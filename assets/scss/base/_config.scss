@@ -10,6 +10,7 @@
 //-------------------
 $background-color:  #FFFFFF;
 $main-color:        #FFED00;
+$yellow:            #FFED00;
 
 // Grayscale
 $gray-1:            #333333;
@@ -33,5 +34,15 @@ $text-color:        $gray-1;
 //-------------------
 //  Font config
 //-------------------
+@font-face {
+	font-family: 'AvantGardEF';
+	src: url('../assets/fonts/AvantGardEF-Bold.eot');
+	src: url('../assets/fonts/AvantGardEF-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/AvantGardEF-Bold.woff') format('woff'),
+		url('../assets/fonts/AvantGardEF-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
 $primary-font: "Open Sans", Helvetica, Arial, sans-serif;
-$secondary-font: "Open Sans", Helvetica, Arial, sans-serif;
+$secondary-font: "AvantGardEF", Helvetica, Arial, sans-serif;

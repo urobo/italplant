@@ -12,12 +12,10 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 .header {
     background-color: $white;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
     position: fixed;
     width: 100vw;
     z-index: 1000;
 }
-
 
 /*----------------------
    Top space (fix nav)
@@ -31,10 +29,10 @@ $margin-logo: ($header-height - $logo-height)/2;
    Logo
 -----------------------*/
 .site-logo img {
-    float: left;
     width: auto;
     height: $logo-height;
-    margin: $margin-logo 0;
+    margin: $margin-logo auto;
+    display: block;
 }
 
 
