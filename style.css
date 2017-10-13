@@ -618,9 +618,15 @@ a:hover {
 .bg-footer {
   background-color: #666666; }
 
+.footer-top {
+  padding: 2.75rem 0; }
+
 .footer {
-  font-size: 14px;
-  color: #FFFFFF; }
+  font-size: 1rem;
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  padding-bottom: 2.75rem; }
 
 .footer-links ul {
   list-style: none;
@@ -633,6 +639,23 @@ a:hover {
   padding-bottom: 6px; }
   .footer-links a:hover {
     text-decoration: line-through; }
+
+.footer-copy {
+  color: #FFED00;
+  text-align: right;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: .7rem;
+  float: right; }
+
+.footer-alert {
+  background-color: #FFED00;
+  padding: 1.5rem 0; }
+  .footer-alert .fa-content {
+    font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111111;
+    padding-left: 60px; }
 
 /*-----------------------
     Config
@@ -936,7 +959,7 @@ input[type="submit"]:visited {
   padding: .5em 1.5em;
   border: none;
   cursor: pointer;
-  background: #FFED00;
+  background: #276f9d;
   text-align: center;
   transition: all 0.14s ease-in-out; }
   .btn:hover,
@@ -951,7 +974,7 @@ input[type="submit"]:visited {
     color: #FFFFFF;
     text-decoration: none;
     outline: none;
-    background: #998e00; }
+    background: #17435e; }
   .btn:active,
   a.btn:active:visited, .comment-respond input.submit:active, input[type="submit"]:active,
   .btn:visited:active,
@@ -1128,19 +1151,23 @@ input[type="submit"]:visited {
 -----------------------*/
 input,
 textarea {
-  padding: .5em;
+  padding: 1.5em .5em .5em;
   margin-bottom: .5em;
   display: block;
   width: 100%;
   box-shadow: none;
-  border: thin solid #F6F6F6; }
+  border: 1px solid #999999;
+  border-radius: 2px; }
   input:focus,
   textarea:focus {
     outline: none;
     border-color: #FFED00; }
 
 input[type="submit"] {
-  margin-top: .85rem; }
+  margin-top: .85rem;
+  padding: 1em 1.5em;
+  font-weight: bold;
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif; }
 
 /*----------------------
    Hero style
@@ -1218,3 +1245,18 @@ input[type="submit"] {
       .h-features .hf-content .hf-list ul li {
         font-weight: 600;
         padding-bottom: .5rem; }
+
+/*----------------------
+   Hero style
+-----------------------*/
+.h-contacts {
+  padding: 6rem 0; }
+  .h-contacts h3 {
+    color: #333333; }
+  .h-contacts p {
+    font-size: .9rem; }
+
+.hc-landscape {
+  margin-bottom: 5rem; }
+  .hc-landscape img {
+    width: 100%; }

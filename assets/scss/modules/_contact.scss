@@ -1,0 +1,20 @@
+/*----------------------
+   Hero style
+-----------------------*/
+.h-contacts{
+    padding: 6rem 0;
+
+    h3{
+        color: $text-color;
+    }
+    p{
+        font-size: .9rem;
+    }
+}
+
+.hc-landscape{
+    img{
+        width: 100%;
+    }
+    margin-bottom: 5rem;
+}

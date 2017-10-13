@@ -10,7 +10,7 @@
     padding: .5em 1.5em;
     border: none;
     cursor: pointer;
-    background: $main-color;
+    background: $blue-marine;
     text-align: center;
     transition: all 0.14s ease-in-out;
 
@@ -18,7 +18,7 @@
         color: $white;
         text-decoration: none;
         outline: none;
-        background: shade($main-color, 40%);
+        background: shade($blue-marine, 40%);
     }
     &:active {
         top: 1px;

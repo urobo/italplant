@@ -111,10 +111,26 @@ $hf_bg_large = (array) get_size($hf_bg, 2400);
 
 
 
+<?php // Home contact 2-col content ?>
+<?php
+    $hc_bg = get_field('h-landscape');
 
-
-
-
+ ?>
+<div class="h-contacts">
+    <div class="l-container">
+        <div class="l-col-10 l-col-push-1 hc-landscape">
+            <img class="" <?php acf_img_srcset($hc_bg,'large',12); ?>alt="<?php echo $hc_bg['alt']; ?>">
+        </div>
+        <div class="l-col-4 l-col-push-1 hc-left">
+            <h3><?php echo the_field('hc-title-left'); ?></h3>
+            <?php echo the_field('hc-content-left'); ?>
+        </div>
+        <div class="l-col-4 l-col-push-2 hc-right">
+            <h3><?php echo the_field('hc-title-right'); ?></h3>
+            <?php echo the_field('hc-contactform-right'); ?>
+        </div>
+    </div>
+</div>
 
 <?php /* The Hero ?>
 

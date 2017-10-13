@@ -4,12 +4,13 @@
 
 input,
 textarea {
-    padding: .5em;
+    padding: 1.5em .5em .5em;
     margin-bottom: .5em;
     display: block;
     width: 100%;
     box-shadow: none;
-    border: thin solid $light-gray;
+    border: 1px solid $gray;
+    border-radius: 2px;
     &:focus{
         outline: none;
         border-color: $main-color;
@@ -19,4 +20,7 @@ textarea {
 input[type="submit"] {
     margin-top: .85rem;
     @extend %btn;
+    padding: 1em 1.5em;
+    font-weight: bold;
+    font-family: $secondary-font;
 }
