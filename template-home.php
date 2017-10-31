@@ -14,6 +14,8 @@
     $bg_medium = (array) get_size($image, 1600 );
     $bg_large = (array) get_size($image, 2400);
     ?>
+
+<!-- <div class="overlay-test"></div> -->
 <div class="h-hero">
 
     <style media="screen">

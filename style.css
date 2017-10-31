@@ -419,8 +419,8 @@ template {
 
 @font-face {
   font-family: 'AvantGardEF';
-  src: url("../assets/fonts/AvantGardEF-Bold.eot");
-  src: url("../assets/fonts/AvantGardEF-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/AvantGardEF-Bold.woff") format("woff"), url("../assets/fonts/AvantGardEF-Bold.ttf") format("truetype");
+  src: url("assets/fonts/AvantGardEF-Bold.eot");
+  src: url("assets/fonts/AvantGardEF-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/AvantGardEF-Bold.woff") format("woff"), url("assets/fonts/AvantGardEF-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
@@ -1168,6 +1168,19 @@ input[type="submit"] {
   padding: 1em 1.5em;
   font-weight: bold;
   font-family: "AvantGardEF", Helvetica, Arial, sans-serif; }
+
+.overlay-test {
+  width: 120vw;
+  height: 120vh;
+  overflow: hidden;
+  position: fixed;
+  top: -10vh;
+  left: -10vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 9999;
+  display: block; }
 
 /*----------------------
    Hero style

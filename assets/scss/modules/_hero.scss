@@ -1,3 +1,17 @@
+.overlay-test{
+    width: 120vw;
+    height: 120vh;
+    overflow: hidden;
+    position: fixed;
+    top:-10vh;
+    left:-10vh;
+    background-color: rgba(255,255,255,.8);
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    display: block;
+
+}
+
 /*----------------------
    Hero style
 -----------------------*/
