@@ -3,7 +3,7 @@
 Costom Post Type for Products
 *************************************/
 
-function cpt_italplant() {
+function cpt_products_italplant() {
 
 	$labels = array(
 		'name'                  => _x( 'Products', 'Post Type General Name', 'italplant' ),
@@ -53,7 +53,7 @@ function cpt_italplant() {
     'rewrite'               => array( 'slug' => 'Products', 'with_front' => false ),
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'Products', $args );
+	register_post_type( 'products', $args );
 
 }
-add_action( 'init', 'cpt_italplant', 0 );
+add_action( 'init', 'cpt_products_italplant', 0 );
