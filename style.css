@@ -417,6 +417,13 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'AvantGardEF';
+  src: url("assets/fonts/AvantGardEF-Bold.eot");
+  src: url("assets/fonts/AvantGardEF-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/AvantGardEF-Bold.woff") format("woff"), url("assets/fonts/AvantGardEF-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
 .clearfix::after, .pagination::after {
   clear: both;
   content: "";
@@ -462,7 +469,7 @@ ul {
   padding: 0 0 1.75em 1.25em; }
 
 h1, h2, h3, h4 {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
   color: #FFED00;
   font-weight: bold; }
 
@@ -489,16 +496,20 @@ a:hover {
 -----------------------*/
 .header {
   background-color: #FFFFFF;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   position: fixed;
   width: 100vw;
   z-index: 1000; }
+
+.header-wrap {
+  padding: 0 1.4rem;
+  max-width: 1600px;
+  margin: 0 auto; }
 
 /*----------------------
    Top space (fix nav)
 -----------------------*/
 .fix-nav {
-  padding-top: 80px; }
+  padding-top: 70px; }
 
 /*----------------------
    Logo
@@ -506,7 +517,7 @@ a:hover {
 .site-logo img {
   float: left;
   width: auto;
-  height: 55px;
+  height: 45px;
   margin: 12.5px 0; }
 
 /*----------------------
@@ -562,7 +573,7 @@ a:hover {
       position: relative; }
     .site-nav li a {
       padding: 0 1em;
-      line-height: 80px;
+      line-height: 70px;
       font-size: 14px; }
       .site-nav li a:hover {
         margin-bottom: -3px;
@@ -1135,3 +1146,61 @@ textarea {
 
 input[type="submit"] {
   margin-top: .85rem; }
+
+/*----------------------
+   Hero style
+-----------------------*/
+.overlay-test {
+  width: 120vw;
+  height: 120vh;
+  overflow: hidden;
+  position: fixed;
+  top: -10vh;
+  left: -10vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 9999;
+  display: block; }
+
+/*----------------------
+   Hero style
+-----------------------*/
+.h-hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-position: bottom;
+  background-size: cover; }
+
+.yellow-divider {
+  width: 140px;
+  height: 4px;
+  display: block;
+  margin: 1.5rem auto;
+  background-color: #FFED00; }
+
+.yellow-divider-left {
+  width: 140px;
+  height: 4px;
+  display: block;
+  margin: 1.5rem auto 1.5rem 0;
+  background-color: #FFED00; }
+
+.h-hero-content {
+  padding-top: 50vh;
+  text-align: left; }
+  .h-hero-content h1 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 0 50px #1a5371; }
+  .h-hero-content h3 {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 600;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif; }

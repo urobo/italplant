@@ -1,8 +1,8 @@
 /*----------------------
    Setup
 -----------------------*/
-$header-height: 80px;
-$logo-height: 55px;
+$header-height: 70px;
+$logo-height: 45px;
 $break-point: 768px;
 $margin-logo: ($header-height - $logo-height)/2;
 
@@ -12,12 +12,16 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 .header {
     background-color: $white;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
     position: fixed;
     width: 100vw;
     z-index: 1000;
 }
 
+.header-wrap{
+    padding: 0 1.4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
 /*----------------------
    Top space (fix nav)

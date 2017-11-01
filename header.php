@@ -16,8 +16,8 @@
 
     <div id="site-container" class="site-container">
         <header id="site-header" class="l-header header">
-            <div class="l-container">
-                <div class="l-col-12">
+
+                <div class="l-col-12 header-wrap">
 
                     <!-- logo -->
                     <a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">
@@ -35,8 +35,7 @@
                         )); ?>
                     </nav>
 
-                </div>
 
             </div>
         </header>
-        <div class="site-content fix-nav">
+        <div class="site-content">
