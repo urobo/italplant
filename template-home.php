@@ -6,6 +6,11 @@
 
 <?php get_header(); ?>
 
+<?php
+//
+// Hero Background
+//
+ ?>
 <?php while (have_posts()) : the_post();
     if (has_post_thumbnail( $post->ID ) ): $image = get_post_thumbnail_id($post->ID); endif;
     $bg_small = (array) get_size($image, 1242, 2208, true );
@@ -30,28 +35,30 @@
                                 background-image: url('<?php echo $bg_large['url'] ?>');
                         }
                 }
-        </style>
+    </style>
 
-        <div class="l-container h-hero-content">
-            <main role="main" class="l-col-8" id="posts">
-                <h1><?php the_field('hero_title') ?></h1>
-                <div class="yellow-divider-left"></div>
-                <?php if( have_rows('hero_sub_title')  ):
-                        while ( have_rows('hero_sub_title') ) : the_row(); ?>
-                        <h3><?php the_sub_field('line') ?></h3>
-                    <?php endwhile;
-                endif; ?>
+    <div class="l-container h-hero-content">
+        <main role="main" class="l-col-8" id="posts">
+            <h1><?php the_field('hero_title') ?></h1>
+            <div class="yellow-divider-left"></div>
+            <?php if( have_rows('hero_sub_title')  ):
+                    while ( have_rows('hero_sub_title') ) : the_row(); ?>
+                    <h3><?php the_sub_field('line') ?></h3>
+                <?php endwhile;
+            endif; ?>
 
-            </main>
-        </div>
-
+        </main>
     </div>
+
+</div>
 
 <?php endwhile; ?>
 
-<?php //
-      // Areas loop
-      // ?>
+<?php
+//
+// Areas Loop
+//
+ ?>
 
 <div class="l-container">
 
@@ -85,5 +92,81 @@
 
 
 </div>
+
+<?php
+//
+// Quote (static & random)
+//
+?>
+
+<?php
+//
+// Blurry call to action
+//
+?>
+
+<?php
+//
+// Products loop
+//
+?>
+
+<div class="l-container">
+
+    <?php
+    $i = 1;
+    $areas_query = new WP_Query( array(
+        'post_type' => 'products',
+        'posts_per_page' => -1
+    ) ); ?>
+
+    <?php if ( $areas_query->have_posts() ) : ?>
+    	<?php while ( $areas_query->have_posts() ) : $areas_query->the_post(); ?>
+            	<h4><?php the_title(); ?></h4>
+    	<?php
+        endwhile; ?>
+
+    	<?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+    	<h3>You should better be filling this contents first</h3>
+    <?php endif; ?>
+
+</div>
+
+<?php
+//
+// Projects loop
+//
+?>
+
+<div class="l-container">
+
+    <?php
+    $i = 1;
+    $areas_query = new WP_Query( array(
+        'post_type' => 'projects',
+        'posts_per_page' => -1
+    ) ); ?>
+
+    <?php if ( $areas_query->have_posts() ) : ?>
+    	<?php while ( $areas_query->have_posts() ) : $areas_query->the_post(); ?>
+            	<h4><?php the_title(); ?></h4>
+    	<?php
+        endwhile; ?>
+
+    	<?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+    	<h3>You should better be filling this contents first</h3>
+    <?php endif; ?>
+
+</div>
+
+<?php
+//
+// Blog loop
+//
+?>
 
 <?php get_footer(); ?>

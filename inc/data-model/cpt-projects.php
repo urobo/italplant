@@ -3,7 +3,7 @@
 Costom Post Type for Projects
 *************************************/
 
-function cpt_projacts_italplant() {
+function cpt_projects_italplant() {
 
 	$labels = array(
 		'name'                  => _x( 'Projects', 'Post Type General Name', 'italplant' ),
@@ -56,4 +56,4 @@ function cpt_projacts_italplant() {
 	register_post_type( 'projects', $args );
 
 }
-add_action( 'init', 'cpt_projacts_italplant', 0 );
+add_action( 'init', 'cpt_projects_italplant', 0 );

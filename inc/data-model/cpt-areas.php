@@ -50,7 +50,7 @@ function cpt_areas_italplant() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-    'rewrite'               => array( 'slug' => 'Areas', 'with_front' => false ),
+    'rewrite'               => array( 'slug' => 'areas', 'with_front' => false ),
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'areas', $args );
