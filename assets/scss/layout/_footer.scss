@@ -17,7 +17,21 @@
 	font-family: $secondary-font;
 	font-weight: 500;
 	color: $white;
-	padding-bottom: 2.75rem;
+	.menu{
+		margin: 0;
+		font-family: $primary-font;
+	}
+	.contatti{
+		margin-bottom: 20px;
+		padding: 0;
+		@media only screen and (min-width: $break-point){
+			padding-left:60px;
+		}
+		span{
+			line-height: 30px;
+			display: block;
+		}
+	}
 }
 
 .footer-links{
@@ -32,28 +46,18 @@
 		display: inline-block;
 		padding-bottom: 6px;
 		&:hover{
-			text-decoration: line-through;
+			text-decoration: underline;
 		}
 	}
 }
 
 .footer-copy{
-	color: $yellow;
-	text-align: right;
+	color: $white;
+	text-align: center;
 	font-family: $primary-font;
-	font-size: .7rem;
-	float: right;
-}
-
-.footer-alert{
-	background-color: $yellow;
-	padding: 1.5rem 0;
-
-	.fa-content{
-		font-family: $secondary-font;
-		font-size: 1rem;
-		font-weight: 600;
-		color: $black;
-		padding-left: 60px;
-	}
+	font-size: .9rem;
+	line-height: 1;
+	padding: 2rem 0;
+	display: block;
+	width: 100%;
 }

@@ -10,13 +10,23 @@
     <footer class="l-container footer">
         <?php $contacts = get_field('contatti', 'option'); ?>
 
-        <div class="l-col-3 contatti" style="padding-left:60px;">
-            <span><?php echo $contacts['indirizzo_nr']; ?></span><br>
-            <span><?php echo $contacts['cap_citta']; ?></span><br>
-        </div>
         <div class="l-col-3 contatti">
-            <span><?php echo $contacts['email']; ?></span><br>
-            <span><?php echo $contacts['telefono']; ?></span><br>
+            <span><?php echo $contacts['indirizzo_nr']; ?></span>
+            <span><?php echo $contacts['cap_citta']; ?></span>
+            <span><?php echo $contacts['email']; ?></span>
+            <span><?php echo $contacts['telefono']; ?></span>
+        </div>
+        <div class="l-col-3 l-col-push-1 footer-links">
+            <?php wp_nav_menu(array(
+                'container' => false,
+                'theme_location' => 'footer-links-1',
+            )); ?>
+        </div>
+        <div class="l-col-3 footer-links">
+            <?php wp_nav_menu(array(
+                'container' => false,
+                'theme_location' => 'footer-links-2',
+            )); ?>
         </div>
     </footer>
     <div class="l-container">

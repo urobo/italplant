@@ -623,9 +623,26 @@ a:hover {
 .bg-footer {
   background-color: #666666; }
 
+.footer-top {
+  padding: 2.75rem 0; }
+
 .footer {
-  font-size: 14px;
+  font-size: 1rem;
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   color: #FFFFFF; }
+  .footer .menu {
+    margin: 0;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  .footer .contatti {
+    margin-bottom: 20px;
+    padding: 0; }
+    @media only screen and (min-width: 768px) {
+      .footer .contatti {
+        padding-left: 60px; } }
+    .footer .contatti span {
+      line-height: 30px;
+      display: block; }
 
 .footer-links ul {
   list-style: none;
@@ -637,7 +654,17 @@ a:hover {
   display: inline-block;
   padding-bottom: 6px; }
   .footer-links a:hover {
-    text-decoration: line-through; }
+    text-decoration: underline; }
+
+.footer-copy {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: .9rem;
+  line-height: 1;
+  padding: 2rem 0;
+  display: block;
+  width: 100%; }
 
 /*-----------------------
     Config
