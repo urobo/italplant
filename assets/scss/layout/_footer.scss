@@ -4,9 +4,20 @@
 .bg-footer{
 	background-color: $gray-2;
 }
+
+.footer-top{
+	padding: 2.75rem 0;
+	.footer-logo{
+
+	}
+}
+
 .footer {
-	font-size: 14px;
+	font-size: 1rem;
+	font-family: $secondary-font;
+	font-weight: 500;
 	color: $white;
+	padding-bottom: 2.75rem;
 }
 
 .footer-links{
@@ -23,5 +34,26 @@
 		&:hover{
 			text-decoration: line-through;
 		}
+	}
+}
+
+.footer-copy{
+	color: $yellow;
+	text-align: right;
+	font-family: $primary-font;
+	font-size: .7rem;
+	float: right;
+}
+
+.footer-alert{
+	background-color: $yellow;
+	padding: 1.5rem 0;
+
+	.fa-content{
+		font-family: $secondary-font;
+		font-size: 1rem;
+		font-weight: 600;
+		color: $black;
+		padding-left: 60px;
 	}
 }
