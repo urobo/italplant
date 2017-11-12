@@ -19,10 +19,9 @@
 -----------------------*/
 .h-hero{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
-    background-position: bottom;
-    background-size: cover;
+    background-position: bottom center;
 }
 
 .yellow-divider{
@@ -43,7 +42,7 @@
 
 .h-hero-content{
     padding-top: 40vh;
-    text-align: left;
+    text-align: center;
     h1{
         color: $white;
         font-size: 2.5em;
@@ -59,5 +58,66 @@
         margin:0;
         font-weight: 600;
         font-family: $primary-font;
+    }
+    .h-cta-buttons{
+        margin: 3rem 0;
+
+        %cta-btn{
+            display: inline-block;
+            padding: .9rem 2rem;
+
+            font-family: $secondary-font;
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            line-height: 1;
+            transition: all .3s;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .h-cta-left{
+            @extend %cta-btn;
+
+            color: $white;
+            background-color: none;
+
+            border: 2px solid $white;
+            border-radius: 3px;
+
+            &:hover{
+                text-decoration: none;
+                color: #074459;
+                background-color: $yellow;
+                border-color: $yellow;
+            }
+        }
+
+        .h-cta-right{
+            @extend %cta-btn;
+
+            color: #074459;
+            background-color: $white;
+
+            border: 2px solid $white;
+            border-radius: 3px;
+
+            &:hover{
+                text-decoration: none;
+                background-color: $yellow;
+                border-color: $yellow;
+            }
+        }
+        @media only screen and (min-width: 980px){
+
+            margin: 2rem 0 0;
+
+            .h-cta-left{
+                width: inherit;
+            }
+            .h-cta-right{
+                width: inherit;
+                margin-left: 2rem;
+            }
+        }
     }
 }

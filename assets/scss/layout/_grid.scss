@@ -10,7 +10,7 @@
 @import "neat/neat-helpers";
 $gutter: 3em;
 $max-width: 1200px;
-$desktop: new-breakpoint(min-width 980px);
+$desktop: new-breakpoint(min-width 768px);
 @import "neat";
 
 

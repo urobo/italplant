@@ -621,23 +621,27 @@ a:hover {
    Footer style
 -----------------------*/
 .bg-footer {
-  background-color: #666666; }
+  background-color: #333333; }
 
 .footer-top {
-  padding: 2.75rem 0; }
+  padding: 2.75rem 0 1rem; }
+  .footer-top .footer-logo img {
+    height: 45px; }
 
 .footer {
   font-size: 1rem;
   font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  padding-bottom: 1.4rem;
+  border-bottom: 2px solid #666666; }
   .footer .menu {
     margin: 0;
     font-family: "Open Sans", Helvetica, Arial, sans-serif; }
   .footer .contatti {
     margin-bottom: 20px;
     padding: 0; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 980px) {
       .footer .contatti {
         padding-left: 60px; } }
     .footer .contatti span {
@@ -697,7 +701,7 @@ html {
 /*-----------------------
     Columns Desktop
 ------------------------*/
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
   .l-col-1 {
     float: left;
     display: block;
@@ -786,7 +790,7 @@ html {
 /*-------------------------------
     Pushers
 --------------------------------*/
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
   .l-col-push-1 {
     margin-left: 8.63156%; }
   .l-col-push-2 {
@@ -1195,10 +1199,9 @@ input[type="submit"] {
 -----------------------*/
 .h-hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
-  background-position: bottom;
-  background-size: cover; }
+  background-position: bottom center; }
 
 .yellow-divider {
   width: 140px;
@@ -1216,7 +1219,7 @@ input[type="submit"] {
 
 .h-hero-content {
   padding-top: 40vh;
-  text-align: left; }
+  text-align: center; }
   .h-hero-content h1 {
     color: #FFFFFF;
     font-size: 2.5em;
@@ -1231,3 +1234,43 @@ input[type="submit"] {
     margin: 0;
     font-weight: 600;
     font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  .h-hero-content .h-cta-buttons {
+    margin: 3rem 0; }
+    .h-hero-content .h-cta-buttons .h-cta-left, .h-hero-content .h-cta-buttons .h-cta-right {
+      display: inline-block;
+      padding: .9rem 2rem;
+      font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 1;
+      transition: all .3s;
+      width: 100%;
+      margin-top: 2rem; }
+    .h-hero-content .h-cta-buttons .h-cta-left {
+      color: #FFFFFF;
+      background-color: none;
+      border: 2px solid #FFFFFF;
+      border-radius: 3px; }
+      .h-hero-content .h-cta-buttons .h-cta-left:hover {
+        text-decoration: none;
+        color: #074459;
+        background-color: #FFED00;
+        border-color: #FFED00; }
+    .h-hero-content .h-cta-buttons .h-cta-right {
+      color: #074459;
+      background-color: #FFFFFF;
+      border: 2px solid #FFFFFF;
+      border-radius: 3px; }
+      .h-hero-content .h-cta-buttons .h-cta-right:hover {
+        text-decoration: none;
+        background-color: #FFED00;
+        border-color: #FFED00; }
+    @media only screen and (min-width: 980px) {
+      .h-hero-content .h-cta-buttons {
+        margin: 2rem 0 0; }
+        .h-hero-content .h-cta-buttons .h-cta-left {
+          width: inherit; }
+        .h-hero-content .h-cta-buttons .h-cta-right {
+          width: inherit;
+          margin-left: 2rem; } }
