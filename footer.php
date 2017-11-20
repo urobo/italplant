@@ -1,4 +1,18 @@
 </div>
+
+<?php
+
+// The pre-footer component
+$home_check = get_field('home_line_break_active_component');
+if (!$home_check):
+    $pre_footer = get_field('active_component');
+    if ( $pre_footer ):
+        get_template_part( 'template-parts/global','pre-footer' );
+    endif;
+endif;
+
+?>
+
 <div class="bg-footer">
     <div class="l-container footer-wrap">
         <div class="l-col-10 l-col-push-1 footer-top">

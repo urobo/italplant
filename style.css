@@ -470,7 +470,7 @@ ul {
 
 h1, h2, h3, h4 {
   font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
-  color: #FFED00;
+  color: #666666;
   font-weight: bold; }
 
 /*-----------------------
@@ -1201,7 +1201,8 @@ input[type="submit"] {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-position: bottom center; }
+  background-position: bottom center;
+  background-size: cover; }
 
 .yellow-divider {
   width: 140px;
