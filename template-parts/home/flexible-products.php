@@ -25,21 +25,20 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
 ?>
 <style media="screen">
             .h-products{
+                background: none;
+            }
+            @media (min-width: 767px) {
+                .h-products{
                     background-repeat: no-repeat;
                     background-size: 36vw;
                     background-position: 60vw 120px;
-                    background-image: url('<?php echo $products_bg_small['url'] ?>');
-                    background: hidden;
-            }
-            @media (min-width: 767px) {
-                    .h-products{
-                            background-image: url('<?php echo $products_bg_medium['url'] ?>');
-                    }
+                    background-image: url('<?php echo $products_bg_medium['url'] ?>');
+                }
             }
             @media (min-width: 1023px) {
-                    .h-products{
-                            background-image: url('<?php echo $products_bg_large['url'] ?>');
-                    }
+                .h-products{
+                    background-image: url('<?php echo $products_bg_large['url'] ?>');
+                }
             }
 </style>
 <div class="h-products">
