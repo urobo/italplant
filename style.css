@@ -995,6 +995,15 @@ input[type="submit"]:visited {
   input[type="submit"]:visited:active {
     top: 1px; }
 
+a.h-archive-btn {
+  font-size: 1.2rem;
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 2px solid #333333;
+  margin-top: 90px; }
+
 /*----------------------
    Pagination style
 -----------------------*/
@@ -1289,13 +1298,18 @@ a.h-area-single {
   margin-top: 20px;
   margin-bottom: 20px;
   text-decoration: none;
-  transition: all .2s; }
+  transition: all .2s;
+  border-radius: 3px; }
   a.h-area-single h4 {
     color: #333333;
     line-height: 1.2;
     font-size: 1.2rem;
     transition: all .3s;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    padding: 9px 0 9px 9px;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    margin: 0; }
   a.h-area-single .h-area-thumb {
     width: 100%;
     height: 160px;
@@ -1304,7 +1318,8 @@ a.h-area-single {
   a.h-area-single:hover {
     margin-top: 10px;
     margin-bottom: 30px;
-    text-decoration: underline;
-    -webkit-text-decoration-color: #FFED00;
-            text-decoration-color: #FFED00;
-    text-decoration-skip-ink: auto; }
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); }
+    a.h-area-single:hover h4 {
+      padding-left: 12px;
+      transition: all .2s;
+      transition-delay: .2s; }

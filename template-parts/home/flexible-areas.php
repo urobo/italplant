@@ -60,7 +60,7 @@
         <?php if ($areas_archive_btn): ?>
 
             <div class="l-container">
-                <a href="<?php echo get_post_type_archive_link('news') ?>"><?php echo $areas_archive_btn ?></a>
+                <a href="<?php echo get_post_type_archive_link('news') ?>" class="h-archive-btn"><?php echo $areas_archive_btn ?></a>
             </div>
 
         <?php endif; ?>

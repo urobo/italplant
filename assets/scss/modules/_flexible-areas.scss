@@ -18,6 +18,7 @@ a.h-area-single{
     margin-bottom: 20px;
     text-decoration: none;
     transition: all .2s;
+    border-radius: 3px;
 
     h4{
         color: $gray-1;
@@ -25,6 +26,10 @@ a.h-area-single{
         font-size: 1.2rem;
         transition: all .3s;
         margin-top: 1rem;
+        padding: 9px 0 9px 9px;
+        display: inline-block;
+        border-bottom: 3px solid transparent;
+        margin: 0;
     }
 
     .h-area-thumb{
@@ -38,9 +43,13 @@ a.h-area-single{
     &:hover{
         margin-top: 10px;
         margin-bottom: 30px;
-        text-decoration: underline;
-        text-decoration-color: $yellow;
-        text-decoration-skip-ink: auto;
+        box-shadow: 0 5px 20px rgba(0,0,0,.1);
+        h4{
+            padding-left: 12px;
+            transition: all .2s;
+            transition-delay: .2s;
+            //border-bottom: 3px solid $yellow;
+        }
     }
 }
 
