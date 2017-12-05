@@ -3,54 +3,66 @@
  * Template part for the areas loop and content on the template-home.php
  */
 ?>
-<div class="l-container">
+<div class="h-areas">
 
     <?php
     $i = 1;
     $areas_query = new WP_Query( array(
         'post_type' => 'areas',
-        'posts_per_page' => -1
+        'posts_per_page' => 8
     ) );
 
     $areas_title = get_field('areas_title');
     $areas_archive_btn = get_field('areas_archive_button');
     $areas_loop = get_field('areas_loop');
-    ?>
-    <?php
 
-    if($areas_title){
-        echo '<h2>'.$areas_title.'</h2>';
-    }
 
-    if($areas_loop):
-        if ( $areas_query->have_posts() ) : ?>
-        	<?php while ( $areas_query->have_posts() ) : $areas_query->the_post(); ?>
+    if($areas_title): ?>
+        <div class="l-container h-areas-title">
+            <h2><?php echo $areas_title ?></h2>
+            <div class="yellow-divider-left"></div>
+        </div>
+    <?php endif; ?>
 
-                <div class="l-col-3">
-                    <?php the_post_thumbnail('medium'); ?>
-                	<h3><?php the_title(); ?></h3>
-                </div>
-        	<?php
-            if($i % 4 == 0) : ?>
-                </div>
-                <div class="l-container">
-            <?php
-            endif;
-            $i++;
+    <div class="l-container">
 
-            endwhile; ?>
+        <?php
+        if($areas_loop):
+            if ( $areas_query->have_posts() ) :
+                while ( $areas_query->have_posts() ) : $areas_query->the_post();
+                    $image = get_post_thumbnail_id($post->ID);
+                    $thumb = (array) get_size($image, 600 ); ?>
 
-        	<?php wp_reset_postdata(); ?>
+                    <a href="#" class="l-col-3 h-area-single">
+                        <div class="h-area-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
+                	    <h4 class="h-area-title"><?php the_title(); ?></h4>
+                    </a>
 
-        <?php else : ?>
-        	<h3>You should better be filling this contents first</h3>
-        <?php endif;
-    endif;
+            	<?php
+                if($i % 4 == 0) : ?>
+                    </div>
+                    <div class="l-container">
+                <?php
+                endif;
+                $i++;
 
-    if ($areas_archive_btn){
-        echo '<a href="'.get_post_type_archive_link('areas').'">'.$areas_archive_btn.'</a>';
-    }
+                endwhile; ?>
 
-    ?>
+            	<?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+            	<h3>You should better be filling this contents first</h3>
+            <?php endif;
+        endif; ?>
+
+        </div>
+
+        <?php if ($areas_archive_btn): ?>
+
+            <div class="l-container">
+                <a href="<?php echo get_post_type_archive_link('news') ?>"><?php echo $areas_archive_btn ?></a>
+            </div>
+
+        <?php endif; ?>
 
 </div>

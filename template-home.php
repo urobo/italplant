@@ -31,7 +31,7 @@ endif;
 
 
 <?php // news (Blog) loop ?>
-<?php get_template_part( 'template-parts/home/flexible','blog' ); ?>
+<?php get_template_part( 'template-parts/home/flexible','news' ); ?>
 
 
 <?php get_footer(); ?>
