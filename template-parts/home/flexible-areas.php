@@ -24,7 +24,7 @@
         </div>
     <?php endif; ?>
 
-    <div class="l-container">
+    <div class="l-container h-area-flex-wrap">
 
         <?php
         if($areas_loop):
@@ -33,18 +33,16 @@
                     $image = get_post_thumbnail_id($post->ID);
                     $thumb = (array) get_size($image, 600 ); ?>
 
-                    <a href="#" class="l-col-3 h-area-single">
+                    <a href="#" class="h-area-single">
                         <div class="h-area-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
                 	    <h4 class="h-area-title"><?php the_title(); ?></h4>
+                        <div class="h-area-excerpt">
+                            <?php echo excerpt(15); ?>
+                        </div>
                     </a>
 
             	<?php
-                if($i % 4 == 0) : ?>
-                    </div>
-                    <div class="l-container">
-                <?php
-                endif;
-                $i++;
+
 
                 endwhile; ?>
 
@@ -60,7 +58,7 @@
         <?php if ($areas_archive_btn): ?>
 
             <div class="l-container">
-                <a href="<?php echo get_post_type_archive_link('news') ?>" class="h-archive-btn"><?php echo $areas_archive_btn ?></a>
+                <a href="<?php echo get_post_type_archive_link('areas') ?>" class="h-archive-btn"><?php echo $areas_archive_btn ?></a>
             </div>
 
         <?php endif; ?>

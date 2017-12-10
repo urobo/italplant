@@ -1001,8 +1001,13 @@ a.h-archive-btn {
   font-weight: 600;
   color: #333333;
   text-decoration: none;
-  border-bottom: 2px solid #333333;
-  margin-top: 90px; }
+  border-bottom: 3px solid #333333;
+  margin: 30px 0;
+  display: inline-block;
+  line-height: 1.2;
+  transition: border-color .2s; }
+  a.h-archive-btn:hover {
+    border-color: #FFED00; }
 
 /*----------------------
    Pagination style
@@ -1288,6 +1293,16 @@ input[type="submit"] {
 /*----------------------
    Areas style
 -----------------------*/
+.h-areas .h-area-flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .h-areas-title {
   padding: 60px 0 10px; }
   .h-areas-title h2 {
@@ -1295,8 +1310,9 @@ input[type="submit"] {
     margin-bottom: 10px; }
 
 a.h-area-single {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  max-width: 24%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   text-decoration: none;
   transition: all .2s;
   border-radius: 3px; }
@@ -1307,19 +1323,26 @@ a.h-area-single {
     transition: all .3s;
     margin-top: 1rem;
     padding: 9px 0 9px 9px;
-    display: inline-block;
-    border-bottom: 3px solid transparent;
-    margin: 0; }
+    border-top: 3px solid transparent;
+    margin: 0;
+    position: relative;
+    display: block;
+    background-color: #FFFFFF; }
   a.h-area-single .h-area-thumb {
     width: 100%;
     height: 160px;
     background-position: center;
     background-size: cover; }
+  a.h-area-single .h-area-excerpt {
+    padding: 9px;
+    font-size: 14px;
+    color: #666666; }
+    a.h-area-single .h-area-excerpt p {
+      margin: 0; }
   a.h-area-single:hover {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); }
+    margin-top: -1rem;
+    margin-bottom: 4rem; }
     a.h-area-single:hover h4 {
-      padding-left: 12px;
-      transition: all .2s;
-      transition-delay: .2s; }
+      border-top: 3px solid #FFED00; }
+    a.h-area-single:hover .h-area-excerpt {
+      color: #666666; }
