@@ -1293,15 +1293,17 @@ input[type="submit"] {
 /*----------------------
    Areas style
 -----------------------*/
-.h-areas .h-area-flex-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+.h-areas {
+  background-color: #F6F6F6; }
+  .h-areas .h-area-flex-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
 
 .h-areas-title {
   padding: 60px 0 10px; }
@@ -1323,11 +1325,10 @@ a.h-area-single {
     transition: all .3s;
     margin-top: 1rem;
     padding: 9px 0 9px 9px;
-    border-top: 3px solid transparent;
+    border-top: 3px solid #FFED00;
     margin: 0;
     position: relative;
-    display: block;
-    background-color: #FFFFFF; }
+    display: block; }
   a.h-area-single .h-area-thumb {
     width: 100%;
     height: 160px;
@@ -1340,9 +1341,8 @@ a.h-area-single {
     a.h-area-single .h-area-excerpt p {
       margin: 0; }
   a.h-area-single:hover {
-    margin-top: -1rem;
-    margin-bottom: 4rem; }
-    a.h-area-single:hover h4 {
-      border-top: 3px solid #FFED00; }
+    background-color: #FFFFFF;
+    margin-top: 0rem;
+    margin-bottom: 3rem; }
     a.h-area-single:hover .h-area-excerpt {
       color: #666666; }

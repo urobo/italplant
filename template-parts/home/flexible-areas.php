@@ -30,8 +30,16 @@
         if($areas_loop):
             if ( $areas_query->have_posts() ) :
                 while ( $areas_query->have_posts() ) : $areas_query->the_post();
-                    $image = get_post_thumbnail_id($post->ID);
-                    $thumb = (array) get_size($image, 600 ); ?>
+                    if ( has_post_thumbnail() ) :
+                        $image = get_post_thumbnail_id($post->ID);
+                        $thumb = (array) get_size($image, 600 );
+                    else :
+                        $thumb['url'] = get_template_directory_uri().'/assets/images/placeholder.png';
+                    endif;
+                    ?>
+
+
+
 
                     <a href="#" class="h-area-single">
                         <div class="h-area-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>

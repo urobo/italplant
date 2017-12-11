@@ -2,6 +2,7 @@
    Areas style
 -----------------------*/
 .h-areas{
+    background-color: $gray-5;
     .h-area-flex-wrap{
         display: flex;
         justify-content: space-between;
@@ -32,11 +33,11 @@ a.h-area-single{
         transition: all .3s;
         margin-top: 1rem;
         padding: 9px 0 9px 9px;
-        border-top: 3px solid transparent;
+        border-top: 3px solid $yellow;
         margin: 0;
         position: relative;
         display: block;
-        background-color: $white;
+        //background-color: $white;
     }
 
     .h-area-thumb{
@@ -56,14 +57,12 @@ a.h-area-single{
     }
 
     &:hover{
-        h4{
-            border-top: 3px solid $yellow;
-        }
+        background-color: $white;
         .h-area-excerpt{
             color: $gray-2;
         }
-        margin-top: -1rem;
-        margin-bottom: 4rem
+        margin-top: 0rem;
+        margin-bottom: 3rem
     }
 }
 
