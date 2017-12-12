@@ -3,6 +3,32 @@
  * Template part for displaying the pre-footer component
  */
 ?>
+<div class="g-pre-footer">
+<?php
+$block_bg = get_field('block_background','option');
+
+if ($block_bg != ''){
+	$block_bg_small = (array) get_size($block_bg, 1242, 2208, true );
+	$block_bg_medium = (array) get_size($block_bg, 1600 );
+	$block_bg_large = (array) get_size($block_bg, 2400);
+}
+?>
+<style media="screen">
+			.g-pre-footer, .g-cta-blur::before{
+					background-image: url('<?php echo $block_bg_small['url'] ?>');
+			}
+			@media (min-width: 767px) {
+					.g-pre-footer, .g-cta-blur::before{
+							background-image: url('<?php echo $block_bg_medium['url'] ?>');
+					}
+			}
+			@media (min-width: 1023px) {
+					.g-pre-footer, .g-cta-blur::before{
+							background-image: url('<?php echo $block_bg_large['url'] ?>');
+					}
+			}
+</style>
+
 <?php
 // retrive the active component checkbox
 if ( get_field('home_line_break_active_component') ):
@@ -20,9 +46,9 @@ foreach( $options as $option ):
 		$rand_quote = $quotes[array_rand($quotes)]['quote_content'];
 		?>
 		<div class="l-container">
-			<div class="l-col-8 l-col-push-2">
-				<h4><?php echo '//' .$rand_quote ?></h4>
-				<div class="">
+			<div class="l-col-8 l-col-push-2 g-quote">
+				<h4><?php echo $rand_quote ?></h4>
+				<div class="g-quote-meta">
 					<b><?php echo $quote_block['title'] ?></b>
 					<span><?php echo $quote_block['sub_title'] ?></span>
 				</div>
@@ -33,12 +59,14 @@ foreach( $options as $option ):
 		<?php
 	elseif ($option == 'cta'):
 		$contact_block = get_field('contact_request','option');?>
-		<div class="l-container">
-			<div class="l-col-8 l-col-push-2">
-				<h4><?php echo $contact_block['title'] ?></h4>
-				<div class="">
-					<span><?php echo $contact_block['content'] ?></span>
-					<a href="<?php echo $contact_block['link'] ?>"><?php echo $contact_block['button_label'] ?></a>
+		<div class="g-cta-blur">
+			<div class="l-container">
+				<div class="l-col-8 l-col-push-2">
+					<h4><?php echo $contact_block['title'] ?></h4>
+					<div class="">
+						<span><?php echo $contact_block['content'] ?></span>
+						<a href="<?php echo $contact_block['link'] ?>"><?php echo $contact_block['button_label'] ?></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -46,3 +74,4 @@ foreach( $options as $option ):
 
 endforeach;
 ?>
+</div>

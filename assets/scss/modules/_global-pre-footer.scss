@@ -1,0 +1,66 @@
+/*----------------------
+   Hero style
+-----------------------*/
+.g-pre-footer{
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+}
+.g-quote{
+    padding: 90px 0;
+    position: relative;
+    h4{
+        color: $white;
+        margin: 0;
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 24px;
+        font-style: italic;
+        &:before{
+            display: block;
+            content: "“";
+            font-family: $secondary-font;
+            font-size: 4rem;
+            font-style: italic;
+            font-weight: 800;
+            position: absolute;
+            left: -2.5rem;
+            top: 4rem;
+        }
+        &:after{
+            display: block;
+            content: "”";
+            font-family: $secondary-font;
+            font-size: 4rem;
+            font-style: italic;
+            font-weight: 800;
+            position: absolute;
+            right: -2.5rem;
+            bottom: 6rem;
+        }
+    }
+    .g-quote-meta{
+        color: $white;
+        text-align: right;
+        margin-top: 2rem;
+        font-size: 1.1rem
+    }
+}
+
+.g-cta-blur{
+    background-color: $white;
+    position: relative;
+
+    &:before{
+        filter: blur(5px);
+        -webkit-filter: url('#blur');
+        filter: url('#blur');
+        -webkit-filter: blur(5px);  
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: ' ';
+        opacity: 0.4;
+    }
+}
