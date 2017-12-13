@@ -14,16 +14,16 @@ if ($block_bg != ''){
 }
 ?>
 <style media="screen">
-			.g-pre-footer, .g-cta-blur::before{
+			.g-pre-footer, .blurred-background{
 					background-image: url('<?php echo $block_bg_small['url'] ?>');
 			}
 			@media (min-width: 767px) {
-					.g-pre-footer, .g-cta-blur::before{
+					.g-pre-footer, .blurred-background{
 							background-image: url('<?php echo $block_bg_medium['url'] ?>');
 					}
 			}
 			@media (min-width: 1023px) {
-					.g-pre-footer, .g-cta-blur::before{
+					.g-pre-footer, .blurred-background{
 							background-image: url('<?php echo $block_bg_large['url'] ?>');
 					}
 			}
@@ -60,15 +60,18 @@ foreach( $options as $option ):
 	elseif ($option == 'cta'):
 		$contact_block = get_field('contact_request','option');?>
 		<div class="g-cta-blur">
-			<div class="l-container">
-				<div class="l-col-8 l-col-push-2">
-					<h4><?php echo $contact_block['title'] ?></h4>
-					<div class="">
-						<span><?php echo $contact_block['content'] ?></span>
-						<a href="<?php echo $contact_block['link'] ?>"><?php echo $contact_block['button_label'] ?></a>
-					</div>
+			<div class="blurred-background">
+				<div class="l-container g-cta-content">
+						<div class="l-col-7">
+						<h3><?php echo $contact_block['title'] ?></h3>
+							<span><?php echo $contact_block['content'] ?></span>
+						</div>
+						<div class="l-col-2 l-col-push-3">
+							<a href="<?php echo $contact_block['link'] ?>"><?php echo $contact_block['button_label'] ?></a>
+						</div>
 				</div>
 			</div>
+
 		</div>
 	<?php endif;
 

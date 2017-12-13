@@ -19,9 +19,10 @@
 }
 
 a.h-area-single{
-    max-width: 24%;
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    margin-right: .9%;
     text-decoration: none;
     transition: all .2s;
     border-radius: 3px;
@@ -37,7 +38,6 @@ a.h-area-single{
         margin: 0;
         position: relative;
         display: block;
-        //background-color: $white;
     }
 
     .h-area-thumb{
@@ -65,7 +65,13 @@ a.h-area-single{
         margin-bottom: 3rem
     }
 }
-
-@media only screen and (min-width: 980px){
-
+@media only screen and (min-width: 768px){
+    a.h-area-single{
+        max-width: 32%;
+    }
+}
+@media only screen and (min-width: 1080px){
+    a.h-area-single{
+        max-width: 24%;
+    }
 }
