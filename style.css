@@ -1014,6 +1014,22 @@ a.h-archive-btn {
     padding-top: 0;
     padding-bottom: 5px; }
 
+a.g-cta-btn {
+  float: right;
+  padding: .8rem 1.8rem;
+  border: 3px solid #276f9d;
+  border-radius: 3px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #276f9d;
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  transition: all .2s ease; }
+  a.g-cta-btn:hover {
+    background-color: #276f9d;
+    color: #E0FEFF;
+    text-decoration: none; }
+
 /*----------------------
    Pagination style
 -----------------------*/
@@ -1314,7 +1330,8 @@ input[type="submit"] {
   padding: 60px 0 10px; }
   .h-areas-title h2 {
     color: #333333;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-size: 36px; }
 
 a.h-area-single {
   width: 100%;
@@ -1360,6 +1377,66 @@ a.h-area-single {
 @media only screen and (min-width: 1080px) {
   a.h-area-single {
     max-width: 24%; } }
+
+/*----------------------
+   Products style
+-----------------------*/
+.h-products {
+  padding: 8rem 0 4rem; }
+
+.h-prod-title {
+  font-size: 36px;
+  color: #333333;
+  margin: 0;
+  line-height: 1; }
+
+.h-prod-description {
+  font-size: 14px; }
+
+.h-prod-list {
+  margin-top: 3rem; }
+  .h-prod-list ul {
+    padding-left: 0; }
+    .h-prod-list ul li {
+      list-style: none;
+      line-height: 1;
+      padding-bottom: 16px; }
+      .h-prod-list ul li a {
+        color: #333333;
+        font-family: "AvantGardEF", Helvetica, Arial, sans-serif; }
+        .h-prod-list ul li a:hover {
+          color: #333333; }
+
+/*----------------------
+   Projects style
+-----------------------*/
+.h-projects {
+  padding: 3rem 0 2rem;
+  background-color: #F6F6F6; }
+
+.h-prj-title {
+  font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #333333;
+  margin: 0;
+  line-height: 1;
+  width: 100%;
+  text-align: center; }
+
+.h-prj-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 150px;
+  width: 80%;
+  margin: 0 auto; }
+  .h-prj-flex .h-prj-logo {
+    width: 16%; }
 
 /*----------------------
    Hero style
@@ -1447,18 +1524,3 @@ a.h-area-single {
       color: #276f9d;
       margin: 0;
       margin-bottom: 24px; }
-    .g-cta-blur .g-cta-content a {
-      float: right;
-      padding: .8rem 1.8rem;
-      border: 3px solid #276f9d;
-      border-radius: 3px;
-      line-height: 1;
-      text-transform: uppercase;
-      color: #276f9d;
-      font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
-      font-size: 18px;
-      transition: all .2s ease; }
-      .g-cta-blur .g-cta-content a:hover {
-        background-color: #276f9d;
-        color: #E0FEFF;
-        text-decoration: none; }

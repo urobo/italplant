@@ -1,0 +1,34 @@
+/*----------------------
+   Products style
+-----------------------*/
+.h-products{
+    padding: 8rem 0 4rem;
+}
+.h-prod-title{
+    font-size: 36px;
+    color: $gray-1;
+    margin: 0;
+    line-height: 1;
+}
+.h-prod-description{
+    font-size: 14px;
+}
+.h-prod-list{
+    margin-top: 3rem;
+    ul{
+        padding-left:0;
+        li{
+            list-style: none;
+            line-height: 1;
+            padding-bottom: 16px;
+                a{
+                    color: $gray-1;
+                    font-family: $secondary-font;
+                    &:hover{
+                        color: $gray-1;
+                        //text-decoration: none;
+                    }
+                }
+        }
+    }
+}

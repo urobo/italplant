@@ -16,9 +16,8 @@ $projects_query = new WP_Query( array(
 ) );
 ?>
 <div class="h-projects">
-    <div class="l-container">
 
-        <div class="l-col-12">
+        <div class="l-col-12 h-prj-title">
             <?php echo $projects_title; ?>
         </div>
 
@@ -26,14 +25,16 @@ $projects_query = new WP_Query( array(
         // Loop
         if($projects_loop):
             if ( $projects_query->have_posts() ) : ?>
-
+                <div class="h-prj-flex">
             	        <?php while ( $projects_query->have_posts() ) : $projects_query->the_post(); ?>
                             <?php $logo = get_field('project_logo') ?>
-                            <div class="l-col-3">
-                                <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></li>
-                            </div>
+
+                                <div class="h-prj-logo">
+                                    <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></li>
+                                </div>
+
                         <?php endwhile; ?>
-                    </ul>
+                    </div>
                 </div>
             	<?php wp_reset_postdata(); ?>
 
@@ -42,5 +43,4 @@ $projects_query = new WP_Query( array(
             <?php endif;
         endif;?>
 
-    </div>
 </div>

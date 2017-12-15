@@ -31,7 +31,7 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
                 .h-products{
                     background-repeat: no-repeat;
                     background-size: 36vw;
-                    background-position: 60vw 120px;
+                    background-position: 60vw center;
                     background-image: url('<?php echo $products_bg_medium['url'] ?>');
                 }
             }
@@ -49,10 +49,15 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
         <?php
         // Title & Description
         if($products_title){
-            echo '<h2>'.$products_title.'</h2>';
+            echo '<h2 class="h-prod-title">'.$products_title.'</h2>';
         }
+        ?>
+
+        <div class="yellow-divider-left"></div>
+
+        <?php
         if($products_description){
-            echo '<div class="products-description">'.$products_description.'</div>';
+            echo '<div class="l-col-10 h-prod-description">'.$products_description.'</div>';
         }
         ?>
 
@@ -61,7 +66,7 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
         // Loop
         if($products_loop):
             if ( $products_query->have_posts() ) : ?>
-                <div class="l-col-6">
+                <div class="l-col-6 h-prod-list">
                     <ul>
             	        <?php while ( $products_query->have_posts() ) : $products_query->the_post(); ?>
 
@@ -70,7 +75,7 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
                                <?php if($i % 7 == 0): ?>
                     </ul>
                 </div>
-                <div class="l-col-6">
+                <div class="l-col-6 h-prod-list">
                     <ul>
                             <?php endif ?>
 
@@ -92,7 +97,7 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
     // Loop link
     if ($products_archive_btn):?>
         <div class="l-container">
-            <a href="<?php echo get_post_type_archive_link('products'); ?>"><?php echo $products_archive_btn; ?></a>
+            <a href="<?php echo get_post_type_archive_link('products'); ?>" class="h-archive-btn"><?php echo $products_archive_btn; ?></a>
         </div>
     <?php endif; ?>
 </div>

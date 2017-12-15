@@ -67,7 +67,7 @@ foreach( $options as $option ):
 							<span><?php echo $contact_block['content'] ?></span>
 						</div>
 						<div class="l-col-2 l-col-push-3">
-							<a href="<?php echo $contact_block['link'] ?>"><?php echo $contact_block['button_label'] ?></a>
+							<a href="<?php echo $contact_block['link'] ?>" class="g-cta-btn"><?php echo $contact_block['button_label'] ?></a>
 						</div>
 				</div>
 			</div>
