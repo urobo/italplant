@@ -72,9 +72,13 @@
             font-size: 18px;
             text-transform: uppercase;
             line-height: 1;
-            transition: all .3s;
+            transition: all .2s;
             width: 100%;
             margin-top: 2rem;
+            &:hover{
+                transform: translateY(-.2rem);
+                box-shadow: 0 5px 15px rgba(0,0,0,.2);
+            }
         }
         .h-cta-left{
             @extend %cta-btn;
@@ -90,6 +94,7 @@
                 color: #074459;
                 background-color: $yellow;
                 border-color: $yellow;
+
             }
         }
 

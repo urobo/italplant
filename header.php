@@ -8,6 +8,9 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+    <?php //External Sources ?>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+
     <?php wp_head(); ?>
 
 </head>

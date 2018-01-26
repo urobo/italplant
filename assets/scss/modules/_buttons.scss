@@ -67,7 +67,9 @@ a.g-cta-btn{
     transition: all .2s ease;
     &:hover{
         background-color: $blue-marine;
-        color: $blue-bright;
+        color: $white;
         text-decoration: none;
+        transform: translateY(-.5rem);
+        box-shadow: 0 5px 15px rgba(0,0,0,.2);
     }
 }

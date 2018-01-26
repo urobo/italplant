@@ -4,7 +4,6 @@
  */
 ?>
 <div class="h-news">
-    <div class="l-container">
 
         <?php // Custom Query Blog
         $news_query = new WP_Query( array(
@@ -19,34 +18,50 @@
         ?>
         <?php
 
-        if($news_title){
-            echo '<h2>'.$news_title.'</h2>';
-        }
+        if($news_title): ?>
+            <div class="l-container h-news-title">
+                <h2><?php echo $news_title ?></h2>
+                <div class="yellow-divider-left"></div>
+            </div>
+        <?php endif; ?>
 
-        if($news_loop):
-            if ( $news_query->have_posts() ) : ?>
+        <div class="l-container h-news-flex-wrap">
 
-            	<?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
-                    <div class="l-col-3">
-                        <?php the_post_thumbnail('medium'); ?>
-                    	<h3><?php the_title(); ?></h3>
-                        <span><?php the_excerpt();  ?></span>
-                    </div>
-                <?php endwhile; ?>
+            <?php
+            if($news_loop):
+                if ( $news_query->have_posts() ) :
+                    while ( $news_query->have_posts() ) : $news_query->the_post();
+                        if ( has_post_thumbnail() ) :
+                            $image = get_post_thumbnail_id($post->ID);
+                            $thumb = (array) get_size($image, 600 );
+                        else :
+                            $thumb['url'] = get_template_directory_uri().'/assets/images/placeholder.png';
+                        endif;
+                    ?>
+                        <a href="#" class="h-news-single">
+                            <div class="h-news-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
+                            <h4 class="h-news-title"><?php the_title(); ?></h4>
+                            <div class="h-news-excerpt">
+                                <?php echo excerpt(15); ?>
+                            </div>
+                        </a>
 
-            	<?php wp_reset_postdata(); ?>
 
-            <?php else : ?>
-            	<h3>You should better be filling this contents first</h3>
-            <?php endif;
-        endif; ?>
+                    <?php endwhile; ?>
+
+                	<?php wp_reset_postdata(); ?>
+
+                <?php else : ?>
+                	<h3>You should better be filling this contents first</h3>
+                <?php endif;
+            endif; ?>
 
         </div>
 
         <?php // Archive Button
         if ($news_archive_btn): ?>
             <div class="l-container">
-                <a href="<?php echo get_post_type_archive_link('news') ?>"><?php echo $news_archive_btn ?></a>
+                <a href="<?php echo get_post_type_archive_link('post') ?>" class="h-archive-btn"><?php echo $news_archive_btn ?></a>
             </div>
         <?php endif; ?>
 

@@ -5,6 +5,58 @@
 ?>
 <div class="h-areas">
 
+    <div class="h-areas-slider">
+        <div class="slider-wrapper">
+            <a href="#" class="h-areas-close-slider open-overlay">close</a>
+
+            <div class="slider-content overlay-logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.svg">
+
+                <?php
+                $areas_slider = new WP_Query( array(
+                    'post_type' => 'areas',
+                    'posts_per_page' => 8
+                ) );
+
+                if ( $areas_slider->have_posts() ) :
+                    while ( $areas_slider->have_posts() ) : $areas_slider->the_post();
+                        if ( has_post_thumbnail() ) :
+                            $image = get_post_thumbnail_id($post->ID);
+                            $thumb = (array) get_size($image, 2400 );
+                        else :
+                            $thumb['url'] = get_template_directory_uri().'/assets/images/placeholder.png';
+                        endif;
+                        ?>
+
+                        <div class="h-area-slide">
+                            <div class="h-area-slide-thumb l-col-5" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
+
+                            <div class="h-area-slide-content l-col-6">
+                                <h3 class="h-area-slide-title"><?php the_title(); ?></h3>
+                                <div class="">
+                                    <?php echo excerpt(130); ?>
+                                </div>
+                            </div>
+
+                            <a href="#">Link</a>
+                        </div>
+
+                	<?php
+
+
+                    endwhile;
+
+                    wp_reset_postdata();
+                endif; ?>
+
+            </div>
+
+        </div>
+    </div>
+    <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+					<path class="shape-overlays__path"></path>
+					<path class="shape-overlays__path"></path>
+					<path class="shape-overlays__path"></path>
+				</svg>
     <?php
     $i = 1;
     $areas_query = new WP_Query( array(
@@ -41,7 +93,7 @@
 
 
 
-                    <a href="#" class="h-area-single">
+                    <a href="#" class="h-area-single open-overlay">
                         <div class="h-area-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
                 	    <h4 class="h-area-title"><?php the_title(); ?></h4>
                         <div class="h-area-excerpt">
