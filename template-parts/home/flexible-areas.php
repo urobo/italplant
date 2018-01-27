@@ -16,7 +16,7 @@
                     'post_type' => 'areas',
                     'posts_per_page' => 8
                 ) );
-
+                $i = 0;
                 if ( $areas_slider->have_posts() ) :
                     while ( $areas_slider->have_posts() ) : $areas_slider->the_post();
                         if ( has_post_thumbnail() ) :
@@ -27,7 +27,7 @@
                         endif;
                         ?>
 
-                        <div class="h-area-slide">
+                        <div class="h-area-slide <?php echo 'slide'.$i ?>">
                             <div class="h-area-slide-thumb l-col-5" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
 
                             <div class="h-area-slide-content l-col-6">
@@ -42,7 +42,7 @@
 
                 	<?php
 
-
+                    $i++;
                     endwhile;
 
                     wp_reset_postdata();
@@ -79,6 +79,7 @@
     <div class="l-container h-area-flex-wrap">
 
         <?php
+        $i=0;
         if($areas_loop):
             if ( $areas_query->have_posts() ) :
                 while ( $areas_query->have_posts() ) : $areas_query->the_post();
@@ -93,7 +94,7 @@
 
 
 
-                    <a href="#" class="h-area-single open-overlay">
+                    <a href="#" class="h-area-single open-overlay" data-selector="<?php echo '.slide'.$i ?>">
                         <div class="h-area-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
                 	    <h4 class="h-area-title"><?php the_title(); ?></h4>
                         <div class="h-area-excerpt">
@@ -103,7 +104,7 @@
 
             	<?php
 
-
+                $i++;
                 endwhile; ?>
 
             	<?php wp_reset_postdata(); ?>
