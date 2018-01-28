@@ -3,7 +3,7 @@
  * Template part for the areas loop and content on the template-home.php
  */
 ?>
-<div class="h-areas">
+<div id="areas" class="h-areas">
 
     <div class="h-areas-slider">
         <div class="slider-wrapper">
