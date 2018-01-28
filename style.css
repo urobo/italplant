@@ -996,7 +996,7 @@ input[type="submit"]:visited {
   input[type="submit"]:visited:active {
     top: 1px; }
 
-a.h-archive-btn {
+a.g-btn-underline {
   font-size: 1.2rem;
   font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -1009,7 +1009,7 @@ a.h-archive-btn {
   padding-top: 5px;
   padding-bottom: 0;
   transition: all .2s; }
-  a.h-archive-btn:hover {
+  a.g-btn-underline:hover {
     border-color: #FFE000;
     padding-top: 0;
     padding-bottom: 5px; }
@@ -1658,27 +1658,39 @@ a.h-news-single {
   text-decoration: none;
   transition: all .2s;
   border-radius: 3px;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 10vh 8vw 5vh; }
   .h-area-slide h3 {
-    color: #FFFFFF;
+    color: #333333;
     line-height: 1.2;
     font-size: 2rem;
     transition: all .3s;
-    margin-top: 1rem;
-    border-bottom: 3px solid #FFFFFF;
-    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
     position: relative;
     display: inline-block; }
   .h-area-slide .h-area-slide-thumb {
-    height: 85vh;
+    height: 75vh;
+    width: 60vw;
     background-position: center;
     background-size: cover; }
   .h-area-slide .h-area-slide-content {
-    padding-top: 25vh;
     font-size: 16px;
-    color: #FFFFFF;
-    line-height: 1.6; }
+    color: #666666;
+    line-height: 1.6;
+    position: absolute;
+    right: 10vw;
+    bottom: 5vw;
+    min-height: 40vh;
+    background: #FFFFFF;
+    padding: 2rem; }
+  .h-area-slide .h-area-slide-link {
+    color: #FFE000;
+    border-bottom-color: #FFE000;
+    margin: 0 auto; }
+    .h-area-slide .h-area-slide-link:hover {
+      border-bottom-color: #FFFFFF; }
 
 .hide-overflow {
   overflow: hidden;

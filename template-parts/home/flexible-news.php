@@ -61,7 +61,7 @@
         <?php // Archive Button
         if ($news_archive_btn): ?>
             <div class="l-container">
-                <a href="<?php echo get_post_type_archive_link('post') ?>" class="h-archive-btn"><?php echo $news_archive_btn ?></a>
+                <a href="<?php echo get_post_type_archive_link('post') ?>" class="g-btn-underline"><?php echo $news_archive_btn ?></a>
             </div>
         <?php endif; ?>
 

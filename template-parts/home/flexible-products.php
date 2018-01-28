@@ -97,7 +97,7 @@ $products_bg_large = (array) get_size($side_drawing, 2400);
     // Loop link
     if ($products_archive_btn):?>
         <div class="l-container">
-            <a href="<?php echo get_post_type_archive_link('products'); ?>" class="h-archive-btn"><?php echo $products_archive_btn; ?></a>
+            <a href="<?php echo get_post_type_archive_link('products'); ?>" class="g-btn-underline"><?php echo $products_archive_btn; ?></a>
         </div>
     <?php endif; ?>
 </div>

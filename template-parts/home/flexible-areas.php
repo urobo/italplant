@@ -30,14 +30,15 @@
                         <div class="h-area-slide <?php echo 'slide'.$i ?>">
                             <div class="h-area-slide-thumb l-col-5" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
 
-                            <div class="h-area-slide-content l-col-6">
+                            <div class="h-area-slide-content l-col-5">
                                 <h3 class="h-area-slide-title"><?php the_title(); ?></h3>
                                 <div class="">
                                     <?php echo excerpt(130); ?>
                                 </div>
+                                <a href="<?php echo get_post_permalink() ?>" class="g-btn-underline h-area-slide-link">Link</a>
                             </div>
 
-                            <a href="#">Link</a>
+
                         </div>
 
                 	<?php
@@ -91,9 +92,6 @@
                     endif;
                     ?>
 
-
-
-
                     <a href="#" class="h-area-single open-overlay" data-selector="<?php echo '.slide'.$i ?>">
                         <div class="h-area-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
                 	    <h4 class="h-area-title"><?php the_title(); ?></h4>
@@ -119,7 +117,7 @@
         <?php if ($areas_archive_btn): ?>
 
             <div class="l-container">
-                <a href="<?php echo get_post_type_archive_link('areas') ?>" class="h-archive-btn"><?php echo $areas_archive_btn ?></a>
+                <a href="<?php echo get_post_type_archive_link('areas') ?>" class="g-btn-underline"><?php echo $areas_archive_btn ?></a>
             </div>
 
         <?php endif; ?>

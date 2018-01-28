@@ -152,32 +152,47 @@
 	text-decoration: none;
 	transition: all .2s;
 	border-radius: 3px;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
 	padding: 10vh 8vw 5vh;
 
 	h3{
-		color: $white;
+		color: $gray-1;
 		line-height: 1.2;
 		font-size: 2rem;
 		transition: all .3s;
-		margin-top: 1rem;
-		border-bottom: 3px solid $white;
-		margin-bottom: 2rem;
+		margin-top: 0;
+		//border-bottom: 3px solid $white;
+		margin-bottom: 1rem;
 		position: relative;
 		display: inline-block;
 	}
 
 	.h-area-slide-thumb{
-		height:85vh;
+		height:75vh;
+		width: 60vw;
 		background-position: center;
 		background-size: cover;
 	}
 
 	.h-area-slide-content{
-		padding-top: 25vh;
 		font-size: 16px;
-		color: $white;
+		color: $gray-2;
 		line-height: 1.6;
+		position: absolute;
+		right: 10vw;
+		bottom: 5vw;
+		min-height: 40vh;
+		background: $white;
+		padding: 2rem;
+	}
+	.h-area-slide-link{
+		color: $yellow;
+		border-bottom-color: $yellow;
+		margin: 0 auto;
+		&:hover{
+			border-bottom-color: $white;
+		}
 	}
 }
 
