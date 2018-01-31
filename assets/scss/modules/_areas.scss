@@ -1,0 +1,123 @@
+/*----------------------
+    Areas main
+-----------------------*/
+.a-areas-hero{
+    width: 100%;
+    min-height: 75vh;
+    overflow: hidden;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.a-areas-hero-content{
+    padding-top: 35vh;
+
+    h1{
+        color: $white;
+        font-size: 2.5em;
+        line-height: 1.4;
+        margin:0;
+        font-weight: 600;
+        text-shadow: 0 0 50px rgb(26, 83, 113);
+    }
+
+    h3{
+        color: $white;
+        font-size: 1.1em;
+        line-height: 1.4;
+        margin:0;
+        font-weight: 200;
+        font-family: $primary-font;
+    }
+
+}
+
+.a-areas-content{
+    padding: 3rem 0;
+    background: $gray-5;
+}
+
+/*----------------------
+    Areas Single
+-----------------------*/
+
+.s-areas-hero{
+    width: 100%;
+    min-height: 60vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.s-areas-hero-content{
+    position: relative;
+    min-height: 60vh;
+
+    .s-areas-hero-box{
+        position: absolute;
+        bottom: 0;
+        background: $white;
+        padding: 2rem;
+        margin: -2rem;
+    }
+
+    h1{
+        bottom: 0;
+        color: $gray-1;
+        font-size: 2.5em;
+        line-height: 1.4;
+        margin:0;
+        font-weight: 600;
+    }
+}
+
+.s-areas-content{
+    margin-bottom: 3rem;
+    .entry-meta{
+        visibility: hidden;
+    }
+
+    aside{
+        padding-left: 4rem;
+        @media only screen and (max-width: 768px){
+            padding-left: 1rem;
+        }
+
+        h3{
+            color: $gray-1;
+            margin-bottom: 10px;
+        }
+        .yellow-divider-left{
+            margin-top: 0;
+        }
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        .active-area{
+            font-weight: 800;
+            text-decoration: underline;
+
+            &::before{
+                display: block;
+                content: ">";
+                float: left;
+                margin-left: -15px;
+            }
+        }
+
+        li {
+            font-weight: 600;
+            margin-bottom: .6rem;
+
+            a{
+                color: $gray-1;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

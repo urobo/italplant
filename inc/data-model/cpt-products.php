@@ -57,3 +57,10 @@ function cpt_products_italplant() {
 
 }
 add_action( 'init', 'cpt_products_italplant', 0 );
+
+function show_all_products_in_archive( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'products' ) ) {
+    $query->set( 'posts_per_page', '-1' );
+  }
+}
+add_action( 'pre_get_posts', 'show_all_products_in_archive' );

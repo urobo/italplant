@@ -57,3 +57,10 @@ function cpt_areas_italplant() {
 
 }
 add_action( 'init', 'cpt_areas_italplant', 0 );
+
+function show_all_areas_in_archive( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'areas' ) ) {
+    $query->set( 'posts_per_page', '-1' );
+  }
+}
+add_action( 'pre_get_posts', 'show_all_areas_in_archive' );

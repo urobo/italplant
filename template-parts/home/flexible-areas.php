@@ -7,7 +7,13 @@
 
     <div class="h-areas-slider">
         <div class="slider-wrapper">
-            <a href="#" class="h-areas-close-slider open-overlay">close</a>
+            <a href="#" class="h-areas-close-slider open-overlay">
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btn-close-slider.svg" alt=""> -->
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btn-close-slider.svg" alt="">
+                <div class="h-areas-close-hint">
+                    Chiudi
+                </div>
+            </a>
 
             <div class="slider-content overlay-logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.svg">
 
@@ -35,7 +41,7 @@
                                 <div class="">
                                     <?php echo excerpt(130); ?>
                                 </div>
-                                <a href="<?php echo get_post_permalink() ?>" class="g-btn-underline h-area-slide-link">Link</a>
+                                <a href="<?php echo get_post_permalink() ?>" class="g-btn-underline h-area-slide-link">Leggi tutto</a>
                             </div>
 
 

@@ -5,7 +5,7 @@
 ?>
 <div class="g-pre-footer">
 <?php
-$block_bg = get_field('block_background','option');
+$block_bg = get_field('quote_background','option');
 
 if ($block_bg != ''){
 	$block_bg_small = (array) get_size($block_bg, 1242, 2208, true );
@@ -36,6 +36,10 @@ if ( get_field('home_line_break_active_component') ):
 else:
 	$options = get_field('active_component');
 endif;
+
+if ( is_archive() ) {
+	$options = get_field('active_component','option');
+}
 
 // display only the active elements
 foreach( $options as $option ):

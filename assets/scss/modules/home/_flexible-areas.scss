@@ -4,11 +4,11 @@
 .h-areas{
     background-color: $gray-5;
     position: relative;
-    .h-area-flex-wrap{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+}
+.h-area-flex-wrap{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .h-areas-title{

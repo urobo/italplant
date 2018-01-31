@@ -12,7 +12,6 @@
     $cta_right = get_field('call_to_action_button_right');
     ?>
 
-<!-- <div class="overlay-test"></div> -->
 <div class="h-hero">
 
     <style media="screen">

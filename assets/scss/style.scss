@@ -52,12 +52,13 @@ Tags: right-sidebar, custom-menu, sticky-post
 //-----------------------
 // CUSTOM MODULES
 //-----------------------
-@import "modules/_flexible-hero";
-@import "modules/_flexible-areas";
-@import "modules/_flexible-products";
-@import "modules/_flexible-projects";
-@import "modules/_flexible-news";
+@import "modules/home/_flexible-hero";
+@import "modules/home/_flexible-areas";
+@import "modules/home/_flexible-products";
+@import "modules/home/_flexible-projects";
+@import "modules/home/_flexible-news";
+@import "modules/home/_fluid-overlay";
 
-@import "modules/_fluid-overlay";
+@import "modules/_areas";
 
 @import "modules/_global-pre-footer";
