@@ -11,39 +11,19 @@ jQuery(document).ready(function($) {
 
 
     // Hashtag Nav
-    $('a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-
-        if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-            &&
-            location.hostname == this.hostname
-        ) {
-
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-            if (target.length) {
-
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000, function() {
-
-                    var $target = $(target);
-                    $target.focus();
-
-                    if ($target.is(":focus")) {
-                        return false;
-                    } else {
-                        $target.attr('tabindex','-1');
-                        $target.focus();
-                    };
-                });
-            }
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top-80
+            }, 700);
+            return false;
+          }
         }
+      });
     });
 
     // Initialise overlay slider
@@ -65,5 +45,12 @@ jQuery(document).ready(function($) {
         });
 
     });
+    $('.a-projects-content').css('height', $('.a-projects-flex-wrap').height() );
+    $(window).on('resize', function(){
+        $('.a-projects-content').css('height', $('.a-projects-flex-wrap').height() );
+    });
+
+
+
 
 });

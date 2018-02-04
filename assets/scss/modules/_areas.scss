@@ -49,32 +49,28 @@
     background-size: cover;
 }
 
-.s-areas-hero-content{
-    position: relative;
-    min-height: 60vh;
-
-    .s-areas-hero-box{
-        position: absolute;
-        bottom: 0;
-        background: $white;
-        padding: 2rem;
-        margin: -2rem;
-    }
-
-    h1{
-        bottom: 0;
-        color: $gray-1;
-        font-size: 2.5em;
-        line-height: 1.4;
-        margin:0;
-        font-weight: 600;
-    }
+.s-area-bg{
+    background: $gray-5;
 }
 
+
 .s-areas-content{
-    margin-bottom: 3rem;
-    .entry-meta{
-        visibility: hidden;
+    article{
+        padding: 1.5rem 2rem 3rem;
+        margin-top: -6rem;
+        margin-bottom: 6rem;
+        background: $white;
+    }
+
+    header{
+        h1{
+            bottom: 0;
+            color: $gray-1;
+            font-size: 2.5em;
+            line-height: 1.4;
+            margin:0;
+            font-weight: 600;
+        }
     }
 
     aside{

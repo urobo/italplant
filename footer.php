@@ -3,8 +3,8 @@
 <?php
 
 // The pre-footer component
-$home_check = get_field('home_line_break_active_component');
-if (!$home_check):
+$home_check = get_field('home_line_break');
+if (!$home_check && !is_singular('products')):
     $pre_footer = get_field('active_component');
     if ( $pre_footer ):
         get_template_part( 'template-parts/global','pre-footer' );

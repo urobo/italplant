@@ -39,7 +39,7 @@
                             <div class="h-area-slide-content l-col-5">
                                 <h3 class="h-area-slide-title"><?php the_title(); ?></h3>
                                 <div class="">
-                                    <?php echo excerpt(130); ?>
+                                    <?php echo excerpt(55); ?>
                                 </div>
                                 <a href="<?php echo get_post_permalink() ?>" class="g-btn-underline h-area-slide-link">Leggi tutto</a>
                             </div>

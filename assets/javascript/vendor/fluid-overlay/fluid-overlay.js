@@ -105,18 +105,4 @@ class ShapeOverlays {
       });
     };
 
-   //  var areas = document.querySelectorAll('.h-area-single');
-   //
-   //  areas.forEach(function (element) {
-   //      console.log(element);
-   //      element.addEventListener('click',function (event){
-   //           //  if ( !matchesSelector( event.target, 'h-area-single' ) ) {
-   //           //  return;
-   //           //}
-   //           var selector = event.target.getAttribute('data-selector');
-   //           console.log(selector);
-   //           flickity.selectCell(selector);
-   //     });
-   // });
-
 }());

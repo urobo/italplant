@@ -38,7 +38,12 @@ else:
 endif;
 
 if ( is_archive() ) {
-	$options = get_field('active_component','option');
+	if ( is_post_type_archive('areas') ):	$settings = get_field('areas_settings','option');
+	elseif ( is_post_type_archive('products') ):	$settings = get_field('products_settings','option');
+	elseif ( is_post_type_archive('projects') ):	$settings = get_field('projects_settings','option');
+	elseif ( is_post_type_archive('projects') ):	$settings = get_field('products_settings','option');
+	endif;
+	$options = $settings['active_component'];
 }
 
 // display only the active elements

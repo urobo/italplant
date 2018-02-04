@@ -8,10 +8,8 @@
 
 	<!-- Post header -->
 	<header class="entry-header">
-        <aside class="entry-meta">
-            <?php _e('Posted', 'italplant'); ?> <?php the_date(); ?>
-			<?php _e('by', 'italplant'); ?> <?php the_author(); ?>
-        </aside>
+		<h1><?php the_title(); ?></h1>
+		<div class="yellow-divider-left"></div>
 	</header>
 
 	<!-- Post content -->
