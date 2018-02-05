@@ -55,9 +55,13 @@ endif;
 <?php wp_footer(); ?>
 <?php // External sources ?>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
-<script src="<?php echo get_template_directory_uri() . '/assets/javascript/vendor/fluid-overlay/easings.js' ?>"></script>
-<script src="<?php echo get_template_directory_uri() . '/assets/javascript/vendor/fluid-overlay/fluid-overlay.js' ?>"></script>
 
+<?php
+// load slider js only on the front page
+if(is_page_template('template-home.php')): ?>
+    <script src="<?php echo get_template_directory_uri() . '/assets/javascript/vendor/fluid-overlay/easings.js' ?>"></script>
+    <script src="<?php echo get_template_directory_uri() . '/assets/javascript/vendor/fluid-overlay/fluid-overlay.js' ?>"></script>
+<?php endif; ?>
 
 </script>
 </body>

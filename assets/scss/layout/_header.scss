@@ -76,11 +76,6 @@ $margin-logo: ($header-height - $logo-height)/2;
         display: block;
         padding: 0.75em;
         white-space: nowrap;
-        &:hover {
-            text-decoration: none;
-            border-bottom: 3px solid $main-color;
-            margin-bottom: -3px;
-        }
     }
     .no-js &,
     .is-menu-on & {
@@ -108,17 +103,33 @@ $margin-logo: ($header-height - $logo-height)/2;
             padding: 0 1em;
             line-height: $header-height;
             font-size: 14px;
+            
             &:hover{
-                margin-bottom: -3px;
-                border-bottom: 3px solid $main-color;
+                text-decoration: none;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $yellow;
+                }
             }
         }
         li.current-menu-item > a,
         li.current_page_item > a,
         li.current_page_ancestor > a,
         .current-menu-ancestor > a {
-            margin-bottom: -3px;
-            border-bottom: 3px solid $main-color;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background-color: $yellow;
+            }
         }
     }
 }

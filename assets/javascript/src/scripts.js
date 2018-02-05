@@ -45,12 +45,20 @@ jQuery(document).ready(function($) {
         });
 
     });
-    $('.a-projects-content').css('height', $('.a-projects-flex-wrap').height() );
-    $(window).on('resize', function(){
+
+
+    if($('.a-projects-content')){
         $('.a-projects-content').css('height', $('.a-projects-flex-wrap').height() );
-    });
+        $(window).on('resize', function(){
+            $('.a-projects-content').css('height', $('.a-projects-flex-wrap').height() );
+        });
+    }
 
-
-
+    if($('.s-projects-content')){
+        $('.s-projects-content').css('height', $('.project-single-wrapper').height() );
+        $(window).on('resize', function(){
+            $('.s-projects-content').css('height', $('.project-single-wrapper').height() );
+        });
+    }
 
 });

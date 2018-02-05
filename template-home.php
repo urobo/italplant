@@ -25,9 +25,10 @@ endif;
 <?php // Products loop ?>
 <?php get_template_part( 'template-parts/home/flexible','products' ); ?>
 
-
-<?php // Projects loop ?>
-<?php get_template_part( 'template-parts/home/flexible','projects' ); ?>
+<div class="l-container">
+    <?php // Projects loop ?>
+    <?php get_template_part( 'template-parts/global','projects' ); ?>
+</div>
 
 
 <?php // news (Blog) loop ?>

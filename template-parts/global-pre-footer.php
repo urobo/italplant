@@ -37,11 +37,22 @@ else:
 	$options = get_field('active_component');
 endif;
 
-if ( is_archive() ) {
-	if ( is_post_type_archive('areas') ):	$settings = get_field('areas_settings','option');
-	elseif ( is_post_type_archive('products') ):	$settings = get_field('products_settings','option');
-	elseif ( is_post_type_archive('projects') ):	$settings = get_field('projects_settings','option');
-	elseif ( is_post_type_archive('projects') ):	$settings = get_field('products_settings','option');
+if ( is_archive() || is_home()) {
+
+	if ( is_post_type_archive('areas') ):
+			$settings = get_field('areas_settings','option');
+
+		elseif ( is_post_type_archive('products')):
+			$settings = get_field('products_settings','option');
+
+		elseif ( is_post_type_archive('projects') ):
+			$settings = get_field('projects_settings','option');
+
+		elseif ( is_home() ):
+			$settings = get_field('news_settings','option');
+
+		else:
+
 	endif;
 	$options = $settings['active_component'];
 }

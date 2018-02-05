@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="a-areas-hero">
     <?php
-    $areas_bg = get_field('areas_backgroud','option');
+    $areas_bg = get_field('areas_background','option');
     $hero_content = get_field('areas_settings','option');
 
 

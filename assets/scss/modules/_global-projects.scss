@@ -1,0 +1,41 @@
+/*----------------------
+   Projects style
+-----------------------*/
+.h-projects{
+    padding-top: 3rem;
+}
+.h-prj-title{
+    font-family: $secondary-font;
+    font-size: 21px;
+    color: $gray-1;
+    margin: 0;
+    line-height: 1;
+    width: 100%;
+    padding-bottom: .7rem;
+    margin-bottom: .5rem;
+    border-bottom: 4px solid $gray-5;
+    text-align: center;
+    @media only screen and (min-width: 1080px){
+            text-align: inherit;
+    }
+}
+.h-prj-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 150px;
+    width: 100%;
+    margin: 0 auto;
+
+    .h-prj-logo{
+        margin: 1rem 0;
+        max-width: 70%;
+        @media only screen and (min-width: 1080px){
+                max-width: 16%;
+        }
+        img{
+            max-width: 200px;
+        }
+    }
+}

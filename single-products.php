@@ -84,12 +84,17 @@
                 $i++;
             endwhile;
             ?>
-            <li class="back-to-top"><a href="#top">Torna Su</a></li> 
+            <li class="back-to-top"><a href="#top">Torna Su</a></li>
         </ul>
     </div>
+
     <?php endif; ?>
 
+</div>
 
+<div class="l-container">
+    <?php // Projects loop ?>
+    <?php get_template_part( 'template-parts/global','projects' ); ?>
 </div>
 
 

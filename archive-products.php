@@ -2,7 +2,7 @@
 <div class="a-products-hero">
     <?php
 
-    $products_bg = get_field('products_backgroud','option');
+    $products_bg = get_field('products_background','option');
     $hero_content = get_field('products_settings','option');
 
 
@@ -62,7 +62,7 @@
 
                             <div class="g-p-content">
                                 <h3><?php the_title(); ?></h3>
-                                <?php echo excerpt(55); ?>
+                                <div><?php echo excerpt(55); ?></div>
                                 <a href="<?php the_permalink(); ?>" class="g-btn-underline">Mostra Dettagli »</a>
                             </div>
 
@@ -79,7 +79,7 @@
 
                             <div class="g-p-content">
                                 <h3><?php the_title(); ?></h3>
-                                <?php echo excerpt(55); ?>
+                                <div><?php echo excerpt(55); ?></div>
                                 <a href="<?php the_permalink(); ?>" class="g-btn-underline">Mostra Dettagli »</a>
                             </div>
 

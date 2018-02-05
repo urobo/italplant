@@ -16,19 +16,16 @@
         $news_archive_btn = get_field('news_archive_button');
         $news_loop = get_field('news_loop');
         ?>
-        <?php
 
-        if($news_title): ?>
-            <div class="l-container h-news-title">
-                <h2><?php echo $news_title ?></h2>
-                <div class="yellow-divider-left"></div>
-            </div>
-        <?php endif; ?>
+        <div class="l-container h-news-title">
+            <h2><?php echo $news_title ?></h2>
+            <div class="yellow-divider-left"></div>
+        </div>
+
 
         <div class="l-container h-news-flex-wrap">
 
             <?php
-            if($news_loop):
                 if ( $news_query->have_posts() ) :
                     while ( $news_query->have_posts() ) : $news_query->the_post();
                         if ( has_post_thumbnail() ) :
@@ -38,7 +35,7 @@
                             $thumb['url'] = get_template_directory_uri().'/assets/images/placeholder.png';
                         endif;
                     ?>
-                        <a href="#" class="h-news-single">
+                        <a href="<?php echo the_permalink(); ?>" class="h-news-single">
                             <div class="h-news-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
                             <h4 class="h-news-title"><?php the_title(); ?></h4>
                             <div class="h-news-excerpt">
@@ -53,8 +50,7 @@
 
                 <?php else : ?>
                 	<h3>You should better be filling this contents first</h3>
-                <?php endif;
-            endif; ?>
+                <?php endif; ?>
 
         </div>
 
