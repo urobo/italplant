@@ -125,6 +125,7 @@
 .g-news-sidebar{
     margin-top: 5rem;
     section.widget{
+        margin-bottom: 0;
         input[type="search"]{
             padding-top: 1rem;
             border-radius: 3px;
@@ -139,6 +140,9 @@
         }
         ul{
             padding-left: 0;
+            margin-bottom: 0;
+            padding-bottom: 3rem;
+
             li{
                 list-style: none;
                 a{
@@ -208,46 +212,12 @@
     }
 
     aside{
-        padding-left: 4rem;
-        @media only screen and (max-width: 768px){
-            padding-left: 1rem;
-        }
-
         h3{
             color: $gray-1;
             margin-bottom: 10px;
         }
         .yellow-divider-left{
             margin-top: 0;
-        }
-    }
-
-    ul{
-        list-style: none;
-        padding: 0;
-        .active-area{
-            font-weight: 800;
-            text-decoration: underline;
-
-            &::before{
-                display: block;
-                content: ">";
-                float: left;
-                margin-left: -15px;
-            }
-        }
-
-        li {
-            font-weight: 600;
-            margin-bottom: .6rem;
-
-            a{
-                color: $gray-1;
-                text-decoration: none;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
         }
     }
 }

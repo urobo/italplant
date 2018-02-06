@@ -17,11 +17,12 @@
         $news_loop = get_field('news_loop');
         ?>
 
-        <div class="l-container h-news-title">
-            <h2><?php echo $news_title ?></h2>
-            <div class="yellow-divider-left"></div>
-        </div>
-
+        <?php if($news_title): ?>
+            <div class="l-container h-news-title">
+                <h2><?php echo $news_title ?></h2>
+                <div class="yellow-divider-left"></div>
+            </div>
+        <?php endif; ?>
 
         <div class="l-container h-news-flex-wrap">
 
@@ -53,12 +54,10 @@
                 <?php endif; ?>
 
         </div>
-
-        <?php // Archive Button
-        if ($news_archive_btn): ?>
-            <div class="l-container">
-                <a href="<?php echo get_post_type_archive_link('post') ?>" class="g-btn-underline"><?php echo $news_archive_btn ?></a>
-            </div>
-        <?php endif; ?>
-
+        <div class="l-container last-block">
+            <?php // Archive Button
+            if ($news_archive_btn): ?>
+                    <a href="<?php echo get_post_type_archive_link('post') ?>" class="g-btn-underline"><?php echo $news_archive_btn ?></a>
+            <?php endif; ?>
+        </div>
 </div>

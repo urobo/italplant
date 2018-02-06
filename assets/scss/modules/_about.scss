@@ -1,0 +1,58 @@
+/*----------------------
+    Areas main
+-----------------------*/
+.about-hero{
+    width: 100%;
+    min-height: 75vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    @media only screen and (max-width: 980px){
+        min-height: 40vh;
+    }
+}
+
+.italplant-logo{
+    display: block;
+    text-align: center;
+    img{
+        float:none;
+        margin: 4rem auto 3rem;
+    }
+}
+
+.about-content{
+    padding-bottom: 5rem;
+    display: inline-block;
+}
+
+.about-map-size{
+    height: 500px;
+    margin-bottom: 5rem;
+}
+
+.about-contact-submap{
+    font-size: .9rem;
+    padding-bottom: 5rem;
+
+    h3{
+        color: $gray-1;
+    }
+
+    input,
+    textarea {
+        padding: 1.5em .5em .5em;
+        margin-bottom: .5em;
+        border: 1px solid $gray-1;
+        border-radius: 2px;
+    }
+    input[type="submit"] {
+        display: inline-block;
+        width: inherit;
+        border: none;
+        padding: .7rem 2rem;
+        font-family: $secondary-font;
+        font-size: 18px;
+        text-shadow: 0 2px 2px rgba(0,0,0,.16);
+    }
+}

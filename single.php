@@ -30,27 +30,28 @@
 
 </div>
 
+<div class="s-news-bg">
 
-<div class="l-container s-news-bg">
+    <div class="l-container">
 
-    <main role="main" class="l-col-8 s-news-content">
-        <?php
-        while (have_posts()) : the_post();
-            get_template_part( 'template-parts/content', 'news-single' );
-        endwhile;
-        ?>
-    </main>
+        <main role="main" class="l-col-8 s-news-content">
+            <?php
+            while (have_posts()) : the_post();
+                get_template_part( 'template-parts/content', 'news-single' );
+            endwhile;
+            ?>
+        </main>
 
-    <aside role="complementary" class="widgets l-col-3 l-col-push-1 g-news-sidebar" >
-        <?php get_sidebar(); ?>
-    </aside>
+        <aside role="complementary" class="widgets l-col-3 l-col-push-1 g-news-sidebar" >
+            <?php get_sidebar(); ?>
+        </aside>
 
+    </div>
 </div>
 
-<div class="l-container">
     <?php // Projects loop ?>
-    <?php get_template_part( 'template-parts/home','flexible-news' ); ?>
-</div>
+    <?php get_template_part( 'template-parts/home/flexible','news' ); ?>
+
 
 
 <?php get_footer(); ?>
