@@ -63,7 +63,7 @@
                         $cta_right_content = get_field('cta_right');
 
                         if ($cta_right_content['link_to'] == 'page') {
-                            $cta_right_link = $cta_right_content['link_to_page'];
+                            $cta_right_link = $cta_right_content['link_to_page'].'/#contact-form';
                         }
                         elseif($cta_letf_content['link_to'] =='anchor') {
                             $cta_right_link = '#'.$cta_right_content['anchor_link'];

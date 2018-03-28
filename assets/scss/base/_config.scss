@@ -39,12 +39,13 @@ $text-color:        $gray-1;
 //-------------------
 @font-face {
 	font-family: 'AvantGardEF';
-	src: url('assets/fonts/AvantGardEF-Bold.eot');
-	src: url('assets/fonts/AvantGardEF-Bold.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/AvantGardEF-Bold.woff') format('woff'),
-		url('assets/fonts/AvantGardEF-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
+    src: url('assets/fonts/AvantGardEF-Demi.eot');
+    src: url('assets/fonts/AvantGardEF-Demi.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/AvantGardEF-Demi.woff2') format('woff2'),
+        url('assets/fonts/AvantGardEF-Demi.woff') format('woff'),
+        url('assets/fonts/AvantGardEF-Demi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 $primary-font: "Open Sans", Helvetica, Arial, sans-serif;

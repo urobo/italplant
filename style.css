@@ -420,9 +420,9 @@ template {
 
 @font-face {
   font-family: 'AvantGardEF';
-  src: url("assets/fonts/AvantGardEF-Bold.eot");
-  src: url("assets/fonts/AvantGardEF-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/AvantGardEF-Bold.woff") format("woff"), url("assets/fonts/AvantGardEF-Bold.ttf") format("truetype");
-  font-weight: bold;
+  src: url("assets/fonts/AvantGardEF-Demi.eot");
+  src: url("assets/fonts/AvantGardEF-Demi.eot?#iefix") format("embedded-opentype"), url("assets/fonts/AvantGardEF-Demi.woff2") format("woff2"), url("assets/fonts/AvantGardEF-Demi.woff") format("woff"), url("assets/fonts/AvantGardEF-Demi.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal; }
 
 .clearfix::after, .pagination::after {
@@ -472,7 +472,7 @@ ul {
 h1, h2, h3, h4 {
   font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
   color: #666666;
-  font-weight: bold; }
+  font-weight: normal; }
 
 /*-----------------------
     Link Styles
@@ -547,10 +547,10 @@ a:hover {
     text-align: center; }
   .site-nav li > a {
     color: #333333;
-    font-weight: 600;
     display: block;
     padding: 0.75em;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-family: "AvantGardEF", Helvetica, Arial, sans-serif; }
   .no-js .site-nav,
   .is-menu-on .site-nav {
     max-height: 300px; }
@@ -567,11 +567,12 @@ a:hover {
     .site-nav li {
       display: inline-block;
       text-align: left;
-      position: relative; }
+      position: relative;
+      margin: 0 .5rem; }
     .site-nav li a {
-      padding: 0 1em;
+      padding: 0 .5em;
       line-height: 70px;
-      font-size: 14px; }
+      font-size: 16px; }
       .site-nav li a:hover {
         text-decoration: none; }
         .site-nav li a:hover::before {
@@ -2357,6 +2358,22 @@ label.collapse {
     font-family: "AvantGardEF", Helvetica, Arial, sans-serif;
     font-size: 18px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+/*----------------------
+    Static Page
+-----------------------*/
+.static-hero {
+  background-color: #F6F6F6; }
+
+.static-bg {
+  background-color: #F6F6F6;
+  padding-top: 140px; }
+
+.static-content {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: -2rem -2rem 0 #DDDDDD; }
 
 /*----------------------
    Projects style
