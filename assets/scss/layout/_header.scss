@@ -3,7 +3,7 @@
 -----------------------*/
 $header-height: 70px;
 $logo-height: 45px;
-$break-point: 768px;
+$break-point: 860px;
 $margin-logo: ($header-height - $logo-height)/2;
 
 
@@ -11,7 +11,7 @@ $margin-logo: ($header-height - $logo-height)/2;
    Header wrapper
 -----------------------*/
 .header {
-    background-color: $white;
+    transition: background .3s ease;
     position: fixed;
     width: 100vw;
     z-index: 1000;
@@ -19,6 +19,7 @@ $margin-logo: ($header-height - $logo-height)/2;
 
 .header-wrap{
     padding: 0 1.4rem;
+    width: 100%;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -34,22 +35,18 @@ $margin-logo: ($header-height - $logo-height)/2;
 /*----------------------
    Logo
 -----------------------*/
-.site-logo img {
+.site-logo img{
     float: left;
     width: auto;
     height: $logo-height;
     margin: $margin-logo 0;
-}
-
-
-/*----------------------
-   Mobile menu button
------------------------*/
-.menu-btn{
-    float: right;
-    margin-top: 12px;
-    @media only screen and (min-width: $break-point) {
-        display: none !important;
+    position: absolute;
+    transition: opacity .12s ease-in-out;
+    .logo-light{
+        opacity:0;
+    }
+    .logo-dark{
+        opacity:1;
     }
 }
 
@@ -58,17 +55,25 @@ $margin-logo: ($header-height - $logo-height)/2;
      Mobile menu
 -------------------------*/
 .site-nav {
-    max-height: 0;
+    @include unvisible();
+    min-height: 0;
+    height: 0;
     width: 100%;
-    transition: max-height .2s ease-in-out;
+    transition: all .3s ease-in-out;
     overflow: hidden;
     background: white;
+    display: inline-block;
+    margin-top: 1em;
 
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
         text-align: center;
+    }
+    li{
+        background: $white;
+        padding: 12px 0;
     }
     li > a {
         color: $dark-gray;
@@ -79,8 +84,21 @@ $margin-logo: ($header-height - $logo-height)/2;
     }
     .no-js &,
     .is-menu-on & {
-        max-height: 300px;
+        @include visible();
+        min-height: 300px;
+        margin-top: 2em;
+        height: auto;
     }
+}
+
+#header-bg{
+    width: 100%;
+    height: $header-height;
+    top: -$header-height;
+    position: absolute;
+    background-color: $white;
+    transition: all .15s ease-in-out;
+    z-index: -1;
 }
 
 
@@ -88,22 +106,33 @@ $margin-logo: ($header-height - $logo-height)/2;
    Navigation desktop layout
 ------------------------------*/
 @media only screen and (min-width: $break-point) {
+    .menu-icon {
+        display: none;
+    }
     .site-nav {
-        max-height: none;
+        @include visible();
+        min-height: none;
         width: auto;
         float: right;
         overflow: visible;
+        margin-top: 0;
+        margin-left: 0;
+        background: transparent;
 
         li {
+            background: transparent;
             display: inline-block;
             text-align: left;
             position: relative;
             margin: 0 .5rem;
+            padding: 0;
         }
         li a {
             padding: 0 .5em;
             line-height: $header-height;
             font-size: 16px;
+            color: $white;
+            transition: color .3s ease-in-out;
 
             &:hover{
                 text-decoration: none;
@@ -170,10 +199,49 @@ $margin-logo: ($header-height - $logo-height)/2;
         .sub-menu {
             @include unvisible();
             z-index: 100;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
         }
         &:hover .sub-menu {
             @include visible();
+        }
+    }
+}
+
+body.is-menu-on{
+    overflow: hidden;
+}
+
+#site-header.dark{
+
+    #header-bg{
+        top: 0;
+    }
+    #logo-light{
+        opacity: 0;
+    }
+    #logo-dark{
+        opacity: 1;
+    }
+    .site-nav{
+        li a {
+            color: $dark-gray;
+        }
+    }
+
+    .is-menu-on & {
+        background: rgba(255,255,255,.95);
+        height:100%;
+    }
+
+    .menu-icon > span {
+        background: $dark-gray;
+
+        .is-menu-on & {
+            background: transparent;
+        }
+
+        &:before, &:after{
+            background: $dark-gray;
         }
     }
 }

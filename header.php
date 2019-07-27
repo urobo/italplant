@@ -20,18 +20,24 @@
     <div id="site-container" class="site-container">
         <header id="site-header" class="l-header header">
 
-                <div class="l-col-12 header-wrap">
+                <!-- Background scrolling from top -->
+                <div id="header-bg"></div>
+
+                <div class="header-wrap">
 
                     <!-- logo -->
                     <a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo"/>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo"/ id="logo-dark">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-bwy.svg" alt="Logo"/ id="logo-light">
                     </a>
 
                     <!-- mobile button menu -->
-                    <button class="btn js-menu-toggle menu-btn">Menu</button>
+                    <div class="menu-icon js-menu-toggle" id="js-menu-toggle">
+                      <span></span>
+                    </div>
 
                     <!-- menu -->
-                    <nav class="site-nav">
+                    <nav id="top-nav-link" class="site-nav light-text">
                         <?php wp_nav_menu(array(
                             'container' => false,
                             'theme_location' => 'main-nav',

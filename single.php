@@ -32,9 +32,9 @@
 
 <div class="s-news-bg">
 
-    <div class="l-container">
+    <div class="l-container s-news-content">
 
-        <main role="main" class="l-col-8 s-news-content">
+        <main role="main" class="l-col-7">
             <?php
             while (have_posts()) : the_post();
                 get_template_part( 'template-parts/content', 'news-single' );
@@ -42,7 +42,7 @@
             ?>
         </main>
 
-        <aside role="complementary" class="widgets l-col-3 l-col-push-1 g-news-sidebar" >
+        <aside role="complementary" class="widgets l-col-5 g-news-sidebar" >
             <?php get_sidebar(); ?>
         </aside>
 

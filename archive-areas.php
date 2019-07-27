@@ -30,7 +30,7 @@
     <div class="a-areas-hero-content l-container">
         <div class="l-col-6">
             <h1><?php echo $hero_content['title'] ?></h1>
-            <div class="yellow-divider-left"></div>
+            <div class="yellow-divider-left mobile-left"></div>
             <h3><?php echo $hero_content['subtitle'] ?></h3>
         </div>
     </div>

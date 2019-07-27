@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icn-linkedin" transform="translate(-626 -273)">
+    <rect id="Rectangle_2055" data-name="Rectangle 2055" width="24" height="24" transform="translate(626 273)" fill="none"/>
+    <g id="Group_1776" data-name="Group 1776" transform="translate(1)">
+      <rect id="rectangle" width="4.694" height="15.102" transform="translate(626.374 280.897)" fill="#fff"/>
+      <path id="path" d="M2727.489,1031.82a2.721,2.721,0,1,1,2.72-2.723A2.72,2.72,0,0,1,2727.489,1031.82Z" transform="translate(-2098.768 -752.379)" fill="#fff"/>
+      <path id="path-2" data-name="path" d="M2775.869,1074.3h-4.689v-7.345c0-1.759-.033-4-2.441-4-2.441,0-2.816,1.908-2.816,3.877v7.472h-4.69v-15.1h4.5v2.063h.064a4.932,4.932,0,0,1,4.441-2.439c4.755,0,5.632,3.127,5.632,7.2Z" transform="translate(-2127.873 -778.299)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

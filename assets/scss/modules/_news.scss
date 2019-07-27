@@ -3,21 +3,22 @@
 -----------------------*/
 .a-news-hero{
     width: 100%;
-    min-height: 75vh;
+    height: 100%;
+    min-height: 100vh;
     overflow: hidden;
     background-position: center;
     background-size: cover;
 }
 
 .a-news-hero-content{
-    padding-top: 35vh;
+    padding-top: 50vh;
 
     h1{
         color: $white;
         font-size: 2.5em;
         line-height: 1.4;
         margin:0;
-        font-weight: 600;
+
         text-shadow: 0 0 50px rgb(26, 83, 113);
     }
 
@@ -26,7 +27,7 @@
         font-size: 1.1em;
         line-height: 1.4;
         margin:0;
-        font-weight: 200;
+
         font-family: $primary-font;
     }
 
@@ -34,7 +35,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        margin-top: 5rem;
+        margin: 2em 0;
         li{
             list-style: none;
             margin: 0 1rem 2rem 0;
@@ -62,7 +63,7 @@
 }
 
 .a-news-articles-wrap{
-    margin-top: 5rem;
+    padding-top: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -166,14 +167,15 @@
 
 .s-news-hero{
     width: 100%;
-    min-height: 75vh;
+    min-height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
 .s-news-hero-bg{
     background-position: center;
-    background-size: 110% auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     width: 110%;
     height: 110%;
@@ -192,12 +194,19 @@
 
 
 .s-news-content{
+    width: 100%;
+
     article{
         padding: 1.5rem 2rem 3rem;
         margin-top: -6rem;
         margin-bottom: 6rem;
         background: $white;
         position: relative;
+
+        .entry-meta{
+             padding-left:0;
+        }
+
     }
 
     header{
@@ -207,11 +216,13 @@
             font-size: 2.5em;
             line-height: 1.4;
             margin:0;
-            font-weight: 600;
+
         }
     }
 
     aside{
+        padding:1.5rem 2rem 3rem;
+
         h3{
             color: $gray-1;
             margin-bottom: 10px;
@@ -220,4 +231,23 @@
             margin-top: 0;
         }
     }
+}
+
+@media only screen and (min-width: 520px){
+	.a-news-hero{
+        min-height: 70vh;
+    }
+
+    .a-news-hero-content{
+        padding-top: 35vh;
+    }
+
+    .s-news-content{
+        width: 80%;
+    }
+
+    .s-news-hero{
+        min-height: 70vh;
+    }
+
 }

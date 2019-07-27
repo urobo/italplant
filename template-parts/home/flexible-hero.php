@@ -10,28 +10,28 @@
     $bg_large = (array) get_size($image, 2400);
     $cta_left = get_field('call_to_action_button_left');
     $cta_right = get_field('call_to_action_button_right');
+    $hero_logo = get_field('hero_logo');
     ?>
 
 <div class="h-hero">
 
+    <video playsinline autoplay muted loop poster="<?php echo $bg_large['url'] ?>" id="bgvideo" width="x" height="y">
+        <source src="<?php echo get_template_directory_uri(); ?>/assets/video/hero/hero-bg-video-6.mp4" type="video/mp4">
+    </video>
+
     <style media="screen">
-                .h-hero{
-                        background-image: url('<?php echo $bg_small['url'] ?>');
-                }
-                @media (min-width: 767px) {
-                        .h-hero{
-                                background-image: url('<?php echo $bg_medium['url'] ?>');
-                        }
-                }
-                @media (min-width: 1023px) {
-                        .h-hero{
-                                background-image: url('<?php echo $bg_large['url'] ?>');
-                        }
-                }
+        @media screen and (max-width: 768px) {
+            .h-hero{
+                background-image: url('<?php echo $bg_large['url'] ?>');
+            }
+        }
     </style>
 
     <div class="l-container h-hero-content">
         <main role="main" class="l-col-8 l-col-push-2" id="posts">
+            <div class="hero-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white-shadow.svg" alt="Italplant Logo"/>
+            </div>
             <h1><?php the_field('hero_title') ?></h1>
             <div class="yellow-divider"></div>
             <?php if( have_rows('hero_sub_title')  ):

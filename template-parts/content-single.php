@@ -9,10 +9,6 @@
 	<!-- Post header -->
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        <aside class="entry-meta">
-            <?php _e('Posted', 'italplant'); ?> <?php the_date(); ?>
-			<?php _e('by', 'italplant'); ?> <?php the_author(); ?>
-        </aside>
 	</header>
 
 	<!-- Post content -->
@@ -29,5 +25,9 @@
 	<!-- Post Footer -->
 	<footer class="entry-footer">
 		<?php edit_post_link(); ?>
+		<aside class="entry-meta">
+			<?php _e('Posted', 'italplant'); ?> <?php the_date(); ?>
+			<?php _e('by', 'italplant'); ?> <?php the_author(); ?>
+		</aside>
 	</footer>
 </article>

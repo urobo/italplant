@@ -82,11 +82,11 @@ foreach( $options as $option ):
 		<div class="g-cta-blur">
 			<div class="blurred-background">
 				<div class="l-container g-cta-content">
-						<div class="l-col-7">
+						<div class="l-col-7 cta-contact-msg">
 						<h3><?php echo $contact_block['title'] ?></h3>
 							<span><?php echo $contact_block['content'] ?></span>
 						</div>
-						<div class="l-col-2 l-col-push-3">
+						<div class="l-col-2 cta-contact-rqst">
 							<a href="<?php echo $contact_block['link'] ?>/#contact-form" class="g-cta-btn"><?php echo $contact_block['button_label'] ?></a>
 						</div>
 				</div>

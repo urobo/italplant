@@ -7,6 +7,41 @@
     overflow: hidden;
     background-position: bottom center;
     background-size: cover;
+    position: relative;
+
+    video#bgvideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background: url(assets/images/placeholder.png) no-repeat;
+        background-size: cover;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #bgvideo {
+        display: none;
+    }
+    .hero-logo{
+        display: none;
+    }
+    .h-hero-content{
+        padding-top: 36vh;
+    }
+}
+
+.hero-logo{
+    margin: 0 auto 2rem;
 }
 
 .yellow-divider{
@@ -21,27 +56,35 @@
     width:140px;
     height: 4px;
     display: block;
-    margin: 1.5rem auto 1.5rem 0;
+    margin: 1.5rem auto;
     background-color: $yellow;
+    @media only screen and (min-width: 400px){
+        margin: 1.5rem auto 1.5rem 0;
+    }
+    &.mobile-left{
+        margin: 1.5rem auto 1.5rem 0;
+    }
 }
 
 .h-hero-content{
-    padding-top: 40vh;
+    padding-top: 24vh;
     text-align: center;
     h1{
         color: $white;
-        font-size: 2.5em;
+        font-size: 2em;
         line-height: 1.4;
         margin:0;
-        font-weight: 600;
         text-shadow: 0 0 50px rgb(26, 83, 113);
+        @media only screen and (min-width: 400px){
+            font-size: 2.5em;
+        }
     }
     h3{
         color: $white;
         font-size: 1.1em;
         line-height: 1.4;
         margin:0;
-        font-weight: 600;
+
         font-family: $primary-font;
     }
     .h-cta-buttons{
@@ -52,7 +95,7 @@
             padding: .9rem 2rem;
 
             font-family: $secondary-font;
-            font-weight: 600;
+
             font-size: 18px;
             text-transform: uppercase;
             line-height: 1;

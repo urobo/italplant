@@ -20,7 +20,9 @@
     ?>
     <style media="screen">
 
-        <?php if ($thumb): ?>
+        <?php if ($thumb):
+
+                $bg = 'hero'; ?>
 
     		.static-hero{
     				background-image: url('<?php echo $static_bg_small['url'] ?>');
@@ -42,7 +44,9 @@
     				}
     		}
 
-        <?php else: ?>
+        <?php else:
+
+                $bg = 'no-pic'; ?>
 
             .static-hero{
                 width: 100%;
@@ -55,7 +59,7 @@
     </style>
 </div>
 <div class="static-bg">
-    <div class="l-container">
+    <div class="l-container <?php echo $bg ?>">
 
         <div class="l-col-9 static-content">
             <?php

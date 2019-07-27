@@ -29,73 +29,48 @@
     </style>
 
     <div class="a-products-hero-content l-container">
-        <div class="a-products-hero-pattern"></div>
         <div class="l-col-6">
             <h1><?php echo $hero_content['title'] ?></h1>
-            <div class="yellow-divider-left"></div>
+            <div class="yellow-divider-left mobile-left"></div>
             <h3><?php echo $hero_content['subtitle'] ?></h3>
         </div>
     </div>
-
+    <div class="a-products-hero-pattern"></div>
 </div>
 
-<?php get_template_part( 'template-parts/global','products-nav' ); ?>
 
 <div class="a-products-content">
     <main role="main" id="posts">
 
+        <div class="l-container a-prod-flex-wrap">
             <?php
-            $i = 0;
 
-            while (have_posts()) : the_post();
+            if(have_posts()):
+                    while (have_posts()) : the_post();
 
-                if ( has_post_thumbnail() ) :
-                    $image = get_post_thumbnail_id($post->ID);
-                    $thumb = (array) get_size($image, 1200 );
-                else :
-                    $thumb['url'] = get_template_directory_uri().'/assets/images/placeholder.png';
-                endif;
+                        if ( has_post_thumbnail() ) :
+                            $image = get_post_thumbnail_id($post->ID);
+                            $thumb = (array) get_size($image, 600 );
+                        else :
+                            $thumb['url'] = get_template_directory_uri().'/assets/images/placeholder.png';
+                        endif;
+                        ?>
 
-                ?>
-                <?php if ($i % 2): ?>
-                    <div class="a-products-single-g g-wrapper-even">
+                        <a href="<?php the_permalink(); ?>" class="a-prod-single h-prod-single">
+                            <div class="a-prod-thumb" style="background-image: url('<?php echo $thumb['url'] ?>');"></div>
+                    	    <h4 class="h-prod-title"><?php the_title(); ?></h4>
+                        </a>
 
-                            <div class="g-p-content">
-                                <h3><?php the_title(); ?></h3>
-                                <div><?php echo excerpt(55); ?></div>
-                                <a href="<?php the_permalink(); ?>" class="g-btn-underline">Mostra Dettagli »</a>
-                            </div>
+                	<?php
 
-                            <div class="g-p-picture">
-                                <div class="a-products-thumb">
-                                    <img src="<?php echo $thumb['url'] ?>" alt="<?php echo $thumb['alt'] ?>" class="img-right">
-                                </div>
-                            </div>
+                    endwhile; ?>
 
-                    </div>
 
-                <?php else: ?>
-                    <div class="a-products-single-g g-wrapper-odd">
+                <?php else : ?>
+                	<h3>You should better be filling this contents first</h3>
+                <?php endif; ?>
 
-                            <div class="g-p-content">
-                                <h3><?php the_title(); ?></h3>
-                                <div><?php echo excerpt(55); ?></div>
-                                <a href="<?php the_permalink(); ?>" class="g-btn-underline">Mostra Dettagli »</a>
-                            </div>
-
-                            <div class="g-p-picture">
-                                <div class="a-products-thumb">
-                                    <img src="<?php echo $thumb['url'] ?>" alt="<?php echo $thumb['alt'] ?>" class="img-right">
-                                </div>
-                            </div>
-
-                    </div>
-
-                <?php endif;
-
-                $i++;
-
-            endwhile; ?>
+        </div>
 
     </main>
 

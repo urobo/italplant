@@ -33,7 +33,7 @@
     <div class="a-news-hero-content l-container">
         <div class="l-col-8">
             <h1><?php echo $hero_content['title'] ?></h1>
-            <div class="yellow-divider-left"></div>
+            <div class="yellow-divider-left mobile-left"></div>
         </div>
         <div class="a-news-cat-tag l-col-10">
             <?php wp_list_categories(array('title_li' => '')); ?>

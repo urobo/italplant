@@ -122,7 +122,7 @@
 
         <?php if ($areas_archive_btn): ?>
 
-            <div class="l-container">
+            <div class="l-container view-all">
                 <a href="<?php echo get_post_type_archive_link('areas') ?>" class="g-btn-underline"><?php echo $areas_archive_btn ?></a>
             </div>
 

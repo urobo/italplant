@@ -3,21 +3,23 @@
 -----------------------*/
 .a-areas-hero{
     width: 100%;
-    min-height: 75vh;
+    height: 100%;
+    min-height: 100vh;
     overflow: hidden;
     background-position: bottom center;
     background-size: cover;
 }
 
 .a-areas-hero-content{
-    padding-top: 35vh;
+    padding-top: 50vh;
+    padding-bottom: 3em;
 
     h1{
         color: $white;
         font-size: 2.5em;
         line-height: 1.4;
         margin:0;
-        font-weight: 600;
+
         text-shadow: 0 0 50px rgb(26, 83, 113);
     }
 
@@ -26,7 +28,7 @@
         font-size: 1.1em;
         line-height: 1.4;
         margin:0;
-        font-weight: 200;
+
         font-family: $primary-font;
     }
 
@@ -43,7 +45,7 @@
 
 .s-areas-hero{
     width: 100%;
-    min-height: 60vh;
+    min-height: 100vh;
     overflow: hidden;
     background-position: center;
     background-size: cover;
@@ -55,6 +57,8 @@
 
 
 .s-areas-content{
+    width: 100%;
+    
     article{
         padding: 1.5rem 2rem 3rem;
         margin-top: -6rem;
@@ -69,15 +73,12 @@
             font-size: 2.5em;
             line-height: 1.4;
             margin:0;
-            font-weight: 600;
+
         }
     }
 
     aside{
-        padding-left: 4rem;
-        @media only screen and (max-width: 768px){
-            padding-left: 1rem;
-        }
+        padding:1.5rem 2rem 3rem;
 
         h3{
             color: $gray-1;
@@ -92,7 +93,7 @@
         list-style: none;
         padding: 0;
         .active-area{
-            font-weight: 800;
+            font-weight: bold;
             text-decoration: underline;
 
             &::before{
@@ -104,7 +105,7 @@
         }
 
         li {
-            font-weight: 600;
+
             margin-bottom: .6rem;
 
             a{
@@ -115,5 +116,23 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 520px){
+	.a-areas-hero{
+        min-height: 35vh;
+    }
+
+    .a-areas-hero-content{
+        padding-top: 50vh;
+    }
+
+    .s-areas-content{
+        width: 80%;
+    }
+
+    .s-areas-hero{
+        min-height: 70vh;
     }
 }

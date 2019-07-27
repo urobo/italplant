@@ -9,7 +9,7 @@
 	<!-- Post header -->
 	<header class="entry-header">
 		<h1><?php the_title(); ?></h1>
-		<div class="yellow-divider-left"></div>
+		<div class="yellow-divider-left mobile-left"></div>
 	</header>
 
 	<!-- Post content -->

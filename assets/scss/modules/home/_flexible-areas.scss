@@ -17,6 +17,12 @@
         color: $gray-1;
         margin-bottom: 10px;
         font-size: 36px;
+        text-align: center;
+        line-height: 1;
+        @media only screen and (min-width: 400px){
+            text-align: left;
+            line-height: 1.4;
+        }
     }
 }
 
@@ -69,7 +75,15 @@ a.h-area-single{
         margin-bottom: 2.5rem
     }
 }
+
+.view-all{
+    text-align: center;
+}
+
 @media only screen and (min-width: 768px){
+    .view-all{
+        text-align: left;
+    }
     a.h-area-single{
         max-width: 32%;
     }

@@ -40,7 +40,7 @@
         <aside role="complementary" class="l-col-5 l-pad-4" >
             <?php $areas_settings = get_field('areas_settings','option'); ?>
             <h3><?php echo $areas_settings['sidebar_title'] ?></h3>
-            <div class="yellow-divider-left"></div>
+            <div class="yellow-divider-left mobile-left"></div>
             <?php $areas_query = new WP_Query( array(
                 'post_type' => 'areas',
                 'posts_per_page' => -1

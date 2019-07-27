@@ -6,12 +6,39 @@
 }
 .static-bg{
     background-color: $gray-5;
-    padding-top: 140px;
+    .hero{
+        .static-content{
+            margin-top: -20vh;
+        }
+    }
+    .no-pic{
+        padding-top: 0px;
+    }
 }
+
 
 .static-content{
     background-color: $white;
-    padding: 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
-    box-shadow: -2rem -2rem 0 $gray-4;
+    box-shadow: -1rem -1rem 0 $blue-marine;
+    h1{
+        margin-bottom: 0;
+        line-height: 1;
+    }
+}
+
+@media screen and (min-width: 520px){
+
+    .static-bg{
+        .no-pic{
+            padding-top: 140px;
+        }
+    }
+
+    .static-content{
+        padding: 2rem;
+        box-shadow: -2rem -2rem 0 $blue-marine;
+    }
+
 }

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icn-facebook" transform="translate(-521 -273)">
+    <rect id="Rectangle_2053" data-name="Rectangle 2053" width="24" height="24" transform="translate(521 273)" fill="none"/>
+    <path id="path" d="M12.49,0H9.374C5.881,0,3.619,2.312,3.619,5.906V8.632H.49a.483.483,0,0,0-.49.49v3.946a.483.483,0,0,0,.49.49H3.619V23.51a.483.483,0,0,0,.49.49H8.193a.483.483,0,0,0,.49-.49V13.558h3.657a.483.483,0,0,0,.49-.49V9.123a.54.54,0,0,0-.138-.352.494.494,0,0,0-.352-.138H8.683V6.32c0-1.106.264-1.671,1.709-1.671h2.1a.491.491,0,0,0,.49-.49V.49A.5.5,0,0,0,12.49,0Z" transform="translate(525 273)" fill="#fff"/>
+  </g>
+</svg>

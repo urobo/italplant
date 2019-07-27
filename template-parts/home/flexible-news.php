@@ -54,7 +54,7 @@
                 <?php endif; ?>
 
         </div>
-        <div class="l-container last-block">
+        <div class="l-container last-block view-all">
             <?php // Archive Button
             if ($news_archive_btn): ?>
                     <a href="<?php echo get_post_type_archive_link('post') ?>" class="g-btn-underline"><?php echo $news_archive_btn ?></a>
