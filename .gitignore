@@ -56,4 +56,4 @@ temp/
 *.scssc
 package.json
 
-assets/video/*
+assets/video/hero
